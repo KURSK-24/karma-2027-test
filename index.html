@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Персональная кармическая задача на 2027 год</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#fbf7f2;--cream:#f4ece1;--wine:#7d1d33;--wine2:#9b2c45;--gold:#c9a063;--txt:#3a2a2e;--mut:#7a6a6e;--line:rgba(125,29,51,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.55}
+.wrap{max-width:480px;margin:0 auto;padding:0 16px}
+.hero{padding:34px 0 8px;text-align:center}
+.kick{display:flex;align-items:center;justify-content:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--txt)}
+.kick:before,.kick:after{content:"";width:34px;height:1px;background:var(--txt);opacity:.5}
+h1{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:34px;line-height:1.02;letter-spacing:-.01em;margin:16px 0 10px}
+.star{color:var(--wine);font-size:22px;line-height:1}
+.sub{color:var(--txt);font-size:15px;margin-top:8px}
+.form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;margin:22px 0 8px;box-shadow:0 10px 40px rgba(125,29,51,.08)}
+.form label{display:block;font-size:12px;color:var(--mut);margin:0 0 6px;letter-spacing:.04em}
+.form input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 14px;color:var(--txt);font:inherit;margin:0 0 14px}
+.form input:focus{outline:none;border-color:var(--wine)}
+.btn{display:block;width:100%;border:0;border-radius:14px;padding:16px;font:700 16px Manrope,sans-serif;color:#fff;background:linear-gradient(180deg,var(--wine2),var(--wine));box-shadow:0 10px 26px rgba(125,29,51,.3);cursor:pointer}
+.note{font-size:12px;color:var(--mut);text-align:center;margin-top:10px}
+.road[hidden]{display:none}
+.road{position:relative;margin:96px auto 0!important;animation:rise .9s ease both;height:calc(100svh - 104px);max-height:calc((100vw) * 1.779);aspect-ratio:940/1672;max-width:100%;background:url(img/doroga.jpg) center/cover}
+.road:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0,transparent 10%,transparent 90%,var(--bg) 100%)}
+.ms{position:absolute;transform:translate(-23px,-50%);display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);z-index:2}
+.ms.left{flex-direction:row-reverse;transform:translate(calc(-100% + 23px),-50%)}
+.ms.big{transform:translate(-45px,-50%)}
+.ms.big.left{transform:translate(calc(-100% + 45px),-50%)}
+.dot{width:46px;height:46px;border-radius:50%;flex:none;border:2px solid var(--wine);box-shadow:0 0 0 5px rgba(255,255,255,.55);animation:pulse 2.6s ease-in-out infinite}
+.lbl{width:max-content;max-width:215px;white-space:normal!important;line-height:1.25;background:rgba(255,255,255,.92);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;color:var(--wine);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.lbl small{display:block;white-space:nowrap;font-size:9px!important;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt);font-weight:600}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(255,255,255,.25)}}
+.author{display:flex;gap:12px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;margin-top:18px}
+.author img{flex:none;width:64px;height:64px;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--gold)}
+.author p{font-size:13px;color:var(--mut);line-height:1.4}.author b{display:block;color:var(--wine);font-size:15px}
+#res{padding-bottom:40px}
+.res-head{text-align:center;margin:10px 0 18px}
+h2{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:26px;line-height:1.05;margin:12px 0 8px}
+.meta{font-size:13px;color:var(--mut)}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 18px;margin:0 0 16px;box-shadow:0 10px 40px rgba(125,29,51,.06);scroll-margin-top:12px}
+.tag{display:inline-block;background:var(--wine);color:#fff!important;padding:5px 12px;border-radius:999px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h3{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:22px;line-height:1.1;margin:6px 0 12px}
+h4{font-size:15px;color:var(--wine);margin:16px 0 6px}
+.card p{margin:0 0 10px}
+.card ul{margin:0 0 10px 18px}.card li{margin:0 0 6px}.signs-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:var(--wine);margin:14px 0 6px}
+.flag{background:var(--cream);padding:10px 12px;border-radius:8px;font-weight:600}
+.pair{display:flex;flex-direction:column;background:var(--bg);border-radius:12px;padding:10px 12px}.pair span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hint{font-style:italic;color:var(--mut);border-top:1px dashed var(--line);padding-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.chip{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--cream);color:var(--wine)}
+.chip.focus{background:var(--wine);color:#fff}.chip.exam{background:#f3e3c4;color:#7a5520}
+.paid{background:var(--cream);border-radius:16px;padding:14px;margin-top:14px}.paid .btn{margin-top:10px;text-align:center;text-decoration:none}
+.offer img{width:100%;height:300px;object-fit:cover;object-position:50% 30%;border-radius:16px;margin:0 0 14px}
+.prod{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0}.prod .btn{text-align:center;text-decoration:none;margin-top:8px}
+.gift{text-align:center;font-weight:700;color:var(--wine);margin-top:10px}
+.ill{width:calc(100% + 36px);margin:-20px -18px 14px;height:210px;object-fit:cover;border-radius:20px 20px 0 0;display:block}
+.pain{font-family:Montserrat,sans-serif;font-weight:800;color:var(--txt);font-size:16px;line-height:1.35;border-left:3px solid var(--wine);padding-left:12px}
+details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
+.alt{display:block;text-align:center;margin-top:10px;color:var(--wine);font-size:14px}
+.btn.ghost{background:#fff;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none;margin-top:10px}
+.offer .btn{text-align:center;text-decoration:none;margin-top:10px}
+.date-fields{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:9px;margin:0 0 14px}
+.date-fields select{width:100%;min-height:54px;padding:14px 26px 14px 10px;font:inherit;font-size:16px;color:var(--txt);background:var(--bg);border:1px solid var(--line);border-radius:12px;appearance:none;-webkit-appearance:none;text-align:center;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--wine) 50%),linear-gradient(135deg,var(--wine) 50%,transparent 50%);background-position:calc(100% - 15px) 24px,calc(100% - 10px) 24px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.date-fields select:focus{outline:none;border-color:var(--wine)}
+.ms.big .lbl{font-size:15px;max-width:190px}
+.ms.big .lbl small{white-space:normal}
+.go{margin-top:14px}.go p{font-weight:700;color:var(--wine)}.go{display:grid;grid-template-columns:1fr 1fr;gap:8px}.go p{grid-column:1/-1;margin:0}
+.go a{display:block;text-align:center;padding:12px 8px;border-radius:12px;background:var(--cream);color:var(--wine);font-weight:700;text-decoration:none;border:1px solid var(--line)}
+.express{background:none;padding:0;margin:6px 0 4px}.ex-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:14px;letter-spacing:.06em;margin:0 0 8px}.ex-h2{font-weight:700;color:var(--wine);font-size:14px;margin:8px 0 4px}.express .pair{background:#fff}
+.ms .dot{width:38px;height:38px}
+.ms:not(.big) .lbl{font-size:12px;padding:5px 10px;max-width:150px;background:rgba(255,255,255,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(201,160,99,.45)}
+.ms:not(.big){transform:translate(-19px,-50%)}.ms.left:not(.big){transform:translate(calc(-100% + 19px),-50%)}
+.ms.big,.ms.big.left{flex-direction:column-reverse;gap:10px;transform:translate(-50%,calc(-100% + 45px))}
+.ms.big .dot{width:90px!important;height:90px!important;border:0;background:radial-gradient(circle,transparent 58%,rgba(255,255,255,.0) 60%);box-shadow:0 0 0 2px #e9c98f,0 0 0 7px rgba(255,255,255,.55),0 0 0 9px rgba(201,160,99,.7),0 0 45px 12px rgba(255,214,140,.75);animation:halo 2.8s ease-in-out infinite}
+.ms.big .lbl{width:min(280px,82vw);max-width:none;text-align:center;padding:12px 16px 13px;border-radius:18px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(201,160,99,.6);box-shadow:0 14px 34px rgba(125,29,51,.18)}
+.ms.big .lbl small{white-space:normal;font-size:10px!important;letter-spacing:.24em;color:var(--gold);margin-bottom:4px}
+.ms.big .lbl b{display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:16px;line-height:1.1;color:var(--wine)}
+.ms.big .lbl i{display:inline-block;margin-top:8px;font-style:normal;font-size:12px;font-weight:700;color:#fff;background:var(--wine);padding:5px 12px;border-radius:999px}
+@keyframes halo{50%{box-shadow:0 0 0 2px #e9c98f,0 0 0 10px rgba(255,255,255,.45),0 0 0 12px rgba(201,160,99,.5),0 0 60px 18px rgba(255,214,140,.95)}}
+.chip.calm{background:#e3f1e6;color:#2f7a48}.chip.release{background:#fbe9d6;color:#9a5a17}.chip.exam{background:#f3e3c4;color:#7a5520}.chip.focus{background:var(--wine);color:#fff}
+.express b,.card>p b{color:var(--wine)}
+.prac{margin:14px 0;padding:14px 16px;border-radius:16px;background:#fdf0d8}
+.prac-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:#8a5f1e;margin-bottom:4px}
+.prac p{margin:0!important;font-weight:600}
+.paid .lead{font-weight:800;font-size:17px;color:var(--txt);margin:0 0 8px!important}
+.pts{margin:0 0 12px 0!important;padding:0;list-style:none;counter-reset:n}.pts li{counter-increment:n;position:relative;padding:8px 10px 8px 42px;margin:0 0 8px!important;background:#fff;border-radius:12px;font-weight:700;color:var(--wine)}
+.pts li:before{content:counter(n);position:absolute;left:10px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--wine);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+.paid .hl{font-weight:800;font-size:16px;line-height:1.45;text-decoration:underline;text-decoration-color:rgba(125,29,51,.45);text-underline-offset:4px;color:var(--wine);margin:4px 0 12px!important}
+.paid .btn.ghost{margin-top:10px;text-align:center;text-decoration:none;background:#fff;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none}
+.nw{white-space:nowrap}h1 .nw{display:inline-block}.hero h1{font-size:clamp(20px,6.6vw,34px)}.hero .kick{letter-spacing:.18em;white-space:nowrap;font-size:10px}
+@keyframes tap{0%,100%{transform:translateY(0) scale(1)}40%{transform:translateY(4px) scale(.88)}55%{transform:translateY(0) scale(1)}}
+.tap{display:inline-block;font-size:16px;animation:tap 1.4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes wig{0%,78%,100%{transform:rotate(0) scale(1)}82%{transform:rotate(-7deg) scale(1.08)}86%{transform:rotate(6deg) scale(1.08)}90%{transform:rotate(-4deg) scale(1.04)}94%{transform:rotate(2deg) scale(1)}}
+.ms:not(.big) .dot{animation:wig 3.2s ease-in-out infinite}
+.road a.ms:nth-of-type(1) .dot{animation-delay:0s}.road a.ms:nth-of-type(2) .dot{animation-delay:.6s}.road a.ms:nth-of-type(3) .dot{animation-delay:1.2s}.road a.ms:nth-of-type(4) .dot{animation-delay:1.8s}
+.nextv{display:block;text-align:center;margin-top:16px;padding:14px;border-radius:14px;border:1.5px dashed var(--gold);color:var(--wine);font-weight:800;text-decoration:none;background:#fffaf2}
+.nextv{border:0!important;background:linear-gradient(180deg,#a8324c,#7d1d33)!important;color:#fff!important;box-shadow:0 10px 24px rgba(125,29,51,.3)}
+@keyframes sheen{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}
+.paid a.btn[href^="money.html"],.paid a.btn[href^="year.html"]{position:relative;overflow:hidden;border:0}
+.paid a.btn[href^="money.html"]{background:linear-gradient(135deg,#b8862f,#f3d58b 35%,#c99a3f 55%,#f6dfa2 75%,#b07a25)!important;color:#4a2c05!important;box-shadow:0 10px 26px rgba(176,122,37,.45)!important;text-shadow:0 1px 0 rgba(255,255,255,.4)}
+.paid a.btn[href^="year.html"]{background:linear-gradient(135deg,#fdfbf7,#f1e6f0 30%,#e6eef6 50%,#fbf3e6 70%,#f0e4ea)!important;color:var(--wine)!important;border:1px solid rgba(201,160,99,.55)!important;box-shadow:0 10px 26px rgba(125,29,51,.15),inset 0 1px 0 #fff!important}
+.paid a.btn[href^="money.html"]:after,.paid a.btn[href^="year.html"]:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:sheen 3.2s ease-in-out infinite}
+.pair.grow{background:#eef7ef}.pair.grow span{color:#2f7a48!important}
+.pair.drop{background:#fdf0e3}.pair.drop span{color:#9a5a17!important}
+.pair.sat{background:#9b2c45;color:#fff}.pair.sat span{color:#f6d99a!important;font-size:14px!important}
+.road-cap small{display:block;font:600 11px Manrope,sans-serif;letter-spacing:.06em;text-transform:none!important;color:var(--txt);text-transform:uppercase;margin-top:4px}
+.road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.1;color:var(--wine);top:-92px!important;padding:0 12px}
+.step{margin:0 0 14px}.step p{margin:0 0 10px}
+.theory{font-size:14px;color:var(--mut)}
+.tm{margin:0 0 12px}.t-lbl{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);margin:0 0 2px}
+.frame{font-weight:600;color:var(--wine)}.doc-line{font-style:italic;color:var(--mut)}
+.moon-alt{font-size:13px;color:var(--mut);margin-top:8px}.moon-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.moon-btns button{font:600 13px Manrope,sans-serif;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--wine);cursor:pointer}.moon-btns button.on{background:var(--wine);color:#fff}
+.otz img{width:100%;height:auto;border-radius:12px}.otz figcaption{font-size:13px;color:var(--mut);margin-top:4px}
+.date-err{color:var(--wine);font-size:14px;text-align:center;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="kick">Оксана Смирнова · астролог</div>
+    <h1><span class="nw">Персональная</span><br><span class="nw">кармическая задача</span><br><span class="nw">на 2027 год</span></h1>
+    <div class="star">✦</div>
+    <p class="sub">Расчёт по вашей натальной карте: какую задачу приносит вам 2027 год и как она проявится в деньгах, карьере, отношениях и здоровье</p>
+    <div class="author"><img src="img/oksana-portret.jpg" alt="Оксана Смирнова"><p><b>Оксана Смирнова</b>финансовый астролог. Я считаю кармическую задачу по классике: лунные узлы и Сатурн по вашей дате рождения</p></div>
+  </header>
+
+  <form class="form" id="f" onsubmit="return false">
+    <label for="bdDay">Ваша дата рождения</label>
+    <div class="date-fields"><select id="bdDay" aria-label="День"></select><select id="bdMonth" aria-label="Месяц"></select><select id="bdYear" aria-label="Год"></select></div>
+    <button class="btn" type="submit">Открыть мою дорогу 2027</button>
+    <p class="date-err" id="dErr" hidden>Такой даты нет, проверьте день</p>
+  </form>
+</div>
+
+<div class="road" id="road" hidden>
+  <div class="road-cap">Ваша кармическая задача на 2027 год по сферам<small><span class="tap">👆</span> Нажмите на жемчужину, и сфера откроется подробнее</small></div>
+  <a class="ms left" href="#s-health" style="left:76.6%;top:12.6%"><span class="dot"></span><span class="lbl" data-s="health"><small>Веха 5</small>Здоровье и энергия</span></a>
+  <a class="ms left" href="#s-love" style="left:51.2%;top:23.6%"><span class="dot"></span><span class="lbl" data-s="love"><small>Веха 4</small>Отношения</span></a>
+  <a class="ms left" href="#s-career" style="left:63.2%;top:35.9%"><span class="dot"></span><span class="lbl" data-s="career"><small>Веха 3</small>Карьера</span></a>
+  <a class="ms" href="#s-money" style="left:50.0%;top:54.2%"><span class="dot"></span><span class="lbl" data-s="money"><small>Веха 2</small>Финансы</span></a>
+  <a class="ms big left" href="#s-task" style="left:47.2%;top:82.8%"><span class="dot" style="width:90px;height:90px"></span><span class="lbl" data-s="task"><small>Веха 1</small>Кармическая задача года</span></a>
+</div>
+
+<div class="wrap" id="res" hidden></div>
+
+<script src="astronomy.browser.min.js"></script>
+<script src="karma.js"></script>
+<script>
+(function(){
+  var K = window.KARMA;
+  var TG = 'https://t.me/okssmi';
+  function goal(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} }
+  var LANDING = {money: 'money.html', year: 'year.html'};
+  var SELF = {
+    money:'Вспомните три случая, когда деньги пришли к вам легче всего: через какое дело, каких людей, в какой роли. Это подсказка, где ваш денежный канал, и в 2027 году на него стоит сделать ставку',
+    career:'Выпишите три задачи, которые вы делаете за других, и одну, которую давно хотите взять себе. Это и есть ваш первый шаг к новой роли',
+    love:'Вместо намёка скажите близкому одну конкретную просьбу. Например, «мне тяжело одной оплачивать это каждый месяц». Так начинается разговор, а не ссора',
+    health:'Добавьте в неделю один вечер только для себя и ложитесь до полуночи. Тело в 2027 году отвечает на бережность лучше, чем на рывки'
+  };
+  var ART = {
+    money:{h:'Как я смотрю ваши деньги на год', p:[
+      'Когда ко мне приходят с вопросом «как увеличить доход», я начинаю не с прогноза, а с вашей натальной карты. Это разбор денежного потенциала на всю жизнь: ваши сильные и слабые стороны, таланты, через которые вы будете зарабатывать, какой формат ваш (найм, фриланс, бизнес или инвестиции), денежные ниши и навыки, которые стоит освоить. Я показываю, где сидят денежные блоки и как перевести их в суперсилу, подбираю стратегию обращения с деньгами и рассказываю про ваше предназначение',
+      'Дальше я накладываю на эту карту 2027 год. Главное здесь соляр, карта вашего личного года от дня рождения до дня рождения. Он показывает, что вообще возможно в деньгах в этом году: рост дохода, новый источник заработка или год, где важнее сохранить и укрепить. Транзиты, движение планет по вашей карте, уточняют периоды внутри этих тенденций',
+      'А ещё компенсаторика, на неё клиенты реагируют сильнее всего. Это способ подстелить себе соломки там, где год напряжённый, причём не только астрологией, но и обычной логикой. Например, кредит в этом году можно, но только на недвижимость. Или кредит на бизнес, если каждая копейка уйдёт в бизнес, а не на покупки. Денежные дни я тоже рассчитываю, но это дополнение к картине года, а не её основа',
+      'Всё это я собрала в один разбор «Мой денежный год 2027». Это рабочий инструмент на весь год, к которому вы возвращаетесь перед каждым важным денежным шагом'],
+      btn:'Как проходит «Мой денежный год 2027»'},
+    career:'Карьеру в прогнозе я смотрю по 10 дому вашего соляра. Соляр это карта вашего личного года, от дня рождения до дня рождения. Он показывает, будет ли год про рост и новую роль, про смену работы или про то, чтобы закрепиться на месте',
+    love:'Отношения в прогнозе я смотрю по 5 и 7 домам вашего соляра, карты вашего личного года. Это любовь, знакомства, пара, брак. Видно, будет ли год про встречу, про новый уровень в паре или про проверку на прочность',
+    health:'Здоровье в прогнозе я смотрю по 6 и 12 домам вашего соляра, карты вашего личного года, и по транзитам к вашей карте. Это не диагноз, карта не заменяет врача. Но она подсказывает, в какие периоды беречь силы, планировать обследования и не брать на себя лишнего',
+    year:[
+      'Соляр для меня главное в прогнозе. Он показывает, что вообще возможно в вашем году. Если в соляре нет возможности выйти замуж, то период, который по транзитам похож на замужество, проиграется совершенно по-другому: например, человек в это время нарастит аудиторию в Инстаграме',
+      'Поэтому сначала я смотрю тенденции года: чего ждать и где подстраховаться. А транзиты, движение планет по вашей натальной карте, уточняют периоды внутри этих тенденций',
+      'Где год напряжённый, я подбираю компенсаторику: как подстелить себе соломки и смягчить трудный период не только астрологией, но и логикой. Например, пройти обследование заранее, сменить формат работы, если тяжёлая планета идёт по зоне ежедневной работы, или осмотреть машину при напряжении по дому и имуществу',
+      'Всё это я собираю в личный прогноз на 2027 год по всем сферам. Вы получаете мой голосовой разбор и PDF, к которому возвращаетесь весь год']
+  };
+  function article(id){
+    if(id === 'money'){ var m = ART.money; return '<div class="paid"><h4>' + m.h + '</h4>' + m.p.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.money + '" onclick="return window.__g(\'money\')">' + m.btn + '</a></div>'; }
+    return '<div class="paid"><h4>Как я смотрю это в прогнозе</h4><p>' + ART[id] + '</p>' + ART.year.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">Как проходит прогноз на 2027 год</a></div>';
+  }
+  var COPY = {
+    money:{img:'dengi', title:'Как в 2027 году выйти на новый уровень в доходе и деньгах', pain:'«То пусто, то густо». Работы всё больше, а доход стоит на месте, и непонятно, куда двигаться дальше',
+      lead:'Новый уровень дохода начинается отсюда:', pts:['Через что вам по карте проще зарабатывать','Что 2027 год приносит в деньгах и где подстраховаться'], hl:'Пример компенсаторики по деньгам: кредит в этом году можно, но только на недвижимость. В «Моём денежном годе 2027» вы получаете свой денежный потенциал по натальной карте на всю жизнь и денежную картину 2027 года: тенденции, периоды и где подстелить соломки', sol:'',
+      btn:'Узнать свой <b>ДЕНЕЖНЫЙ ГОД 2027</b> →', alt:'Прогноз на 2027 год по всем сферам →'},
+    career:{img:'kariera', title:'Как в 2027 году найти своё дело и выйти на новый уровень в карьере и бизнесе', pain:'«Надоела работа, не понимаю, куда двигаться». Хочется уволиться или начать своё, но страшно ошибиться с моментом',
+      lead:'Уволиться, запуститься, попросить повышение: сначала важно понять, что год вообще приносит в работе', pts:['Что 2027 год приносит в карьере','Где подстраховаться и какая компенсаторика нужна'], hl:'Пример компенсаторики в работе: если тяжёлая планета идёт по зоне ежедневной работы, стоит сменить формат работы, пойти за повышением или начать зарабатывать по-другому. В прогнозе на 2027 год вы получаете тенденции года в работе, важные точки и что делать, чтобы трудный период прошёл мягче', sol:'', btn:'Хочу прогноз на 2027 год'},
+    love:{img:'otnosheniya', title:'Как в 2027 году встретить своего человека или вывести пару на новый уровень', pain:'«Удастся ли построить отношения в следующем году?» Или пара есть, но одни и те же ссоры идут по кругу',
+      lead:'В отношениях 2027 года важно знать:', pts:['Что год приносит в любви и в паре','Где подстраховаться, чтобы проверка прошла мягче'], hl:'В прогнозе на 2027 год я показываю, что год открывает в любви, где пара проходит проверку и что сделать, чтобы этот период прошёл мягче. Вы получаете тенденции года в отношениях и компенсаторику на напряжённые периоды', sol:'', btn:'Хочу прогноз на 2027 год'},
+    health:{img:'zdorovie', title:'Как в 2027 году сохранить силы и не выгореть', pain:'Со стороны всё пристойно, а внутри усталость, которую не снимает даже отпуск',
+      lead:'Чтобы не выгореть в 2027 году, важно знать:', pts:['В какие периоды беречь силы','Какие простые действия снимают напряжение'], hl:'Пример компенсаторики в здоровье: пройти плановое обследование заранее. В прогнозе на 2027 год вы получаете периоды, где важно беречь силы, и простые действия на них. Карта не заменяет врача, но подсказывает, когда прислушаться к себе внимательнее', sol:'', btn:'Хочу прогноз на 2027 год'}
+  };
+  var LABEL = {focus:'Кармический поворот', release:'Отпустить старое', exam:'Экзамен Сатурна', calm:'Спокойная зона'};
+  function bf(t){ var i = t.indexOf('. '); return i > 0 ? '<b>' + t.slice(0, i + 1) + '</b>' + t.slice(i + 1) : '<b>' + t + '</b>'; }
+  function esc(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]}) }
+
+  var selD = document.getElementById('bdDay'), selM = document.getElementById('bdMonth'), selY = document.getElementById('bdYear');
+  var MON = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+  function fill(el, from, to, labels, ph){ var h = '<option value="" disabled selected>' + ph + '</option>'; if(from <= to){ for(var i = from; i <= to; i++) h += '<option value="' + i + '">' + (labels ? labels[i-1] : i) + '</option>'; } else { for(var j = from; j >= to; j--) h += '<option value="' + j + '">' + j + '</option>'; } el.innerHTML = h; }
+  fill(selD, 1, 31, null, 'День'); fill(selM, 1, 12, MON, 'Месяц'); fill(selY, 2012, 1930, null, 'Год');
+  var cur = null;
+  function render(r){
+    var B = K.build(r), hi = '';
+    var h = '<section class="res-head"><div class="kick">Ваш расчёт</div><h2>Ваша кармическая задача 2027</h2><p class="meta">' + B.meta + '</p>' + B.moonLine + '</section>';
+    h += '<section class="card" id="s-task"><img class="ill" src="img/sfera-zadacha.jpg" alt=""><div class="tag">Веха 1</div><h3>Ваша кармическая задача на 2027 год</h3>' + B.task;
+    h += '<div class="go"><p>Как задача проходит через каждую сферу:</p><a href="#s-money">💰 Деньги</a><a href="#s-career">💼 Карьера</a><a href="#s-love">❤️ Отношения</a><a href="#s-health">🌿 Здоровье и энергия</a></div></section>';
+    var ORDER = [['money','Финансы','dengi'],['career','Карьера','kariera'],['love','Отношения','otnosheniya'],['health','Здоровье и энергия','zdorovie']];
+    ORDER.forEach(function(o, i){
+      var id = o[0], c = COPY[id], prod = id === 'money' ? 'money' : 'year';
+      h += '<section class="card sph-x" id="s-' + id + '" hidden><img class="ill" src="img/sfera-' + c.img + '.jpg" alt=""><div class="tag">Веха ' + (i+2) + ' · ' + o[1] + '</div>';
+      if(id === 'health') h += '<h4>Здоровье</h4>' + B.places.health + '<p class="doc-line">' + B.doc + '</p><h4>Энергия</h4>' + B.places.energy;
+      else h += B.places[id];
+      h += '<p class="frame">' + B.frame[id] + '</p>';
+      h += '<div class="paid"><p class="lead">' + c.lead + '</p><ol class="pts">' + c.pts.map(function(t){return '<li>' + t + '</li>'}).join('') + '</ol><p class="hl">' + c.hl + '</p><a class="btn" href="' + LANDING[prod] + (prod === 'year' ? '?s=' + id : '') + '" onclick="return window.__g(\'' + prod + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="btn ghost" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div>';
+      var nx = ORDER[i+1];
+      h += '<a class="nextv" href="' + (nx ? '#s-' + nx[0] : '#road') + '">' + (nx ? 'Следующая веха: ' + nx[1] + ' →' : '↑ Наверх') + '</a></section>';
+    });
+    h += '<section class="card offer" id="offer" hidden><img src="img/oksana-kniga.jpg" alt="Оксана Смирнова"><div class="kick">Что дальше</div><h3>' + hi + 'ваш 2027 можно прожить по плану</h3>';
+    h += '<p>Вы увидели свою задачу года. А что 2027 год принесёт в каждой сфере, видно по точному времени и месту рождения: что в вашем году меняется, что остаётся стабильным и где подстраховаться. Компенсаторика подскажет, как подстелить себе соломки на трудные периоды</p>';
+    h += '<a class="btn" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">Прогноз на 2027 год по всем сферам</a><a class="btn ghost" href="' + LANDING.money + '" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
+    h += '<p class="gift">🎁 Любой из разборов можно подарить близкому на Новый год</p></section>';
+    var res = document.getElementById('res'); res.innerHTML = h.replace(/\.((?:<\/span>)*)\s*<\/(p|div)>/g, '$1</$2>').replace(/></g, '> <'); res.hidden = false;  // без точки в конце абзаца
+  }
+  document.getElementById('res').addEventListener('click', function(e){
+    var b = e.target.closest('button[data-moon]'); if(!b || !cur) return;
+    cur = K.calc(cur.y, cur.m, cur.d, {moonSel: +b.getAttribute('data-moon')}); render(cur);
+  });
+  document.getElementById('f').addEventListener('submit', function(){
+    var dd = +selD.value, mm = +selM.value, yy = +selY.value, err = document.getElementById('dErr');
+    if(!dd || !mm || !yy){ (!dd ? selD : !mm ? selM : selY).focus(); return; }
+    if(dd > new Date(Date.UTC(yy, mm, 0)).getUTCDate()){ selD.setAttribute('aria-invalid', 'true'); err.hidden = false; selD.focus(); return; }
+    selD.removeAttribute('aria-invalid'); err.hidden = true;
+    cur = K.calc(yy, mm, dd); render(cur);
+    var TEASE = {task:'Ваша кармическая задача на 2027 год', money:'Как выйти на новый уровень дохода', career:'Пора ли менять работу', love:'Кто войдёт в вашу жизнь', health:'Куда утекают ваши силы и энергия'};
+    document.querySelectorAll('.lbl[data-s]').forEach(function(l){
+      var k = l.getAttribute('data-s');
+      var title = {task:'Экспресс-прогноз', money:'Финансы', career:'Карьера', love:'Отношения', health:'Здоровье и энергия'}[k];
+      if(k === 'task'){ l.innerHTML = '<small>✦ Главное · расшифровка</small><b>' + TEASE[k] + '</b><i>Открыть мою задачу ↓</i>'; return; }
+      var onLeft = l.parentNode.classList.contains('left');
+      l.innerHTML = '<small>' + title + '</small>' + (onLeft ? TEASE[k] + ' →' : '← ' + TEASE[k]);
+    });
+    var road = document.getElementById('road'); road.hidden = false;
+    document.querySelectorAll('.lbl').forEach(function(l){ l.classList.add('on'); });
+    try{ if(!localStorage.getItem('karma27_start')) localStorage.setItem('karma27_start', Date.now()); }catch(e){}
+    goal('calc');
+    if(/ns=2/.test(location.search)) window.scrollTo(0, road.getBoundingClientRect().top + window.scrollY - 100); else if(!/ns=1/.test(location.search)) window.scrollTo({top: road.getBoundingClientRect().top + window.scrollY - 100, behavior:'smooth'});
+  });
+  var q = new URLSearchParams(location.search);
+  if(q.get('d')){ var qd = q.get('d').split('-'); selY.value = +qd[0]; selM.value = +qd[1]; selD.value = +qd[2]; document.getElementById('f').dispatchEvent(new Event('submit')); }
+  function openS(id){
+    var el = document.getElementById(id); if(!el) return;
+    document.querySelectorAll('.sph-x').forEach(function(x){ x.hidden = (x.id !== id); });
+    var y = el.getBoundingClientRect().top + window.scrollY - 10;
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]'); if(!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if(/^s-(money|career|love|health)$/.test(id)){ e.preventDefault(); openS(id); }
+    else if(id === 'road' || id === 's-task'){ e.preventDefault(); var t = document.getElementById(id); window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - (id==='road'?100:10), behavior:'smooth'}); }
+  });
+  window.__g = function(p){ goal(p === 'money' ? 'click_money' : 'click_year'); return true; };
+})();
+</script>
+</body>
+</html>

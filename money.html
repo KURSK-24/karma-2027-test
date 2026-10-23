@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мой денежный год 2027 · Оксана Смирнова</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f2;--cream:#f4ece1;--wine:#7d1d33;--wine2:#9b2c45;--gold:#c9a063;--txt:#3a2a2e;--mut:#7a6a6e;--line:rgba(125,29,51,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.55}
+.wrap{max-width:480px;margin:0 auto;padding:0 16px 40px}
+.kick{display:flex;align-items:center;justify-content:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.kick:before,.kick:after{content:"";width:34px;height:1px;background:var(--txt);opacity:.5}
+h1,h2{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);line-height:1.05}
+h1{font-size:34px;margin:14px 0 10px;text-align:center}
+h2{font-size:22px;margin:0 0 12px}
+.hero{padding-top:30px;text-align:center}
+.hero p{font-size:16px}
+.photo{width:100%;height:340px;object-fit:cover;object-position:50% 25%;border-radius:20px;margin:18px 0 6px;display:block}
+.cap{font-size:13px;color:var(--mut);text-align:center}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 18px;margin:16px 0;box-shadow:0 10px 40px rgba(125,29,51,.06)}
+.card p{margin:0 0 10px}
+ul.ch{list-style:none}ul.ch li{position:relative;padding-left:26px;margin:0 0 10px}ul.ch li:before{content:"✦";position:absolute;left:0;color:var(--wine)}
+.step{display:flex;gap:12px;margin:0 0 14px}.step b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step span{display:block;font-weight:700;color:var(--wine)}
+.tar{border:1.5px solid var(--line);border-radius:20px;padding:18px;margin:14px 0;background:#fff}
+.tar.top{border-color:var(--wine);box-shadow:0 12px 40px rgba(125,29,51,.15);position:relative}
+.badge{position:absolute;top:-12px;left:18px;background:var(--wine);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px}
+.tar h3{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:18px;margin:4px 0 6px}
+.tar .for{font-size:14px;color:var(--mut);margin:0 0 10px}
+.price{font-family:Montserrat,sans-serif;font-weight:900;font-size:30px;color:var(--wine);margin:12px 0 4px}
+.price s{font-size:18px;color:var(--mut);font-weight:800;margin-left:8px}
+.timer{font-size:14px;font-weight:700;color:var(--wine);background:var(--cream);border-radius:10px;padding:8px 10px;margin:6px 0 12px;text-align:center}
+.no{color:var(--mut)}.no:before{content:"✕"!important;color:var(--mut)!important}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;border:0;border-radius:14px;padding:16px;font:700 16px Manrope,sans-serif;color:#fff;background:linear-gradient(180deg,var(--wine2),var(--wine));box-shadow:0 10px 26px rgba(125,29,51,.3)}
+.btn.ghost{background:#fff;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none}
+.gift{background:var(--cream);border-radius:14px;padding:12px 14px;font-weight:600;margin-top:12px}
+.quote{font-family:Montserrat,sans-serif;font-weight:800;font-size:18px;color:var(--wine);line-height:1.3;text-align:center;margin:8px 0}
+.trk{margin:16px 0;border-radius:18px;background:var(--cream);padding:14px}
+.trk-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:15px}
+.trk-s{font-size:14px;margin:6px 0 10px}
+.trk-road{position:relative;aspect-ratio:940/1672;max-height:460px;margin:0 auto;border-radius:14px;background:url(img/doroga.jpg) center/cover}
+.tp{position:absolute;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;border:2px solid var(--wine);background:rgba(255,255,255,.35);cursor:pointer;padding:0}
+.tp span{position:absolute;left:46px;top:50%;transform:translateY(-50%);background:#fff;color:var(--wine);font:700 12px Manrope,sans-serif;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.tp.act{background:var(--wine);box-shadow:0 0 0 6px rgba(125,29,51,.25)}.tp.done:after{content:"✓";color:#fff;font-weight:900;font-size:18px}
+.tp.done{background:#3c8a5a;border-color:#3c8a5a}
+.trk-card{background:#fff;border-radius:14px;padding:12px 14px;margin-top:10px;font-size:14px;min-height:120px}
+.trk-card b{display:block;color:var(--wine);font-size:15px;margin-bottom:4px}
+.trk-card label{display:flex;gap:8px;align-items:center;margin-top:8px;font-weight:700;color:var(--wine)}
+.trk-note{font-size:12px;color:var(--mut);margin-top:8px;text-align:center}
+.bon{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}
+.bon-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:15px;margin-bottom:10px}
+.bi{display:flex;gap:10px;margin:0 0 12px}.bi b{flex:none;font-size:22px}.bi span{display:block;font-weight:700;color:var(--wine)}.bi p{font-size:14px;margin:0}
+.art h2{font-size:21px}
+.art-t{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
+.art-lead{font-size:17px;font-weight:700}
+.art h3{display:flex;align-items:center;gap:10px;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:16px;margin:18px 0 8px}
+.art h3 i{font-style:normal;flex:none;width:30px;height:30px;border-radius:50%;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+.art b{color:var(--wine)}
+blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-left:3px solid var(--gold);border-radius:10px;font-style:italic}
+.selfq{background:#fffdf8;border:1.5px dashed rgba(201,160,99,.7);border-radius:16px;padding:14px;margin:16px 0}
+.selfq-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:#8a5f1e;font-size:14px;margin-bottom:6px}
+.art h3.warn{color:#9a3a1a}
+.art-end{font-weight:700;color:var(--wine)}
+.fig{margin:16px -18px;}.fig img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}.fig figcaption{font-size:13px;color:var(--mut);text-align:center;padding:8px 18px 0;font-style:italic}
+.viz{margin:16px 0;padding:16px;border-radius:16px;background:linear-gradient(180deg,#fff,#fbf4ea);border:1px solid rgba(201,160,99,.45)}
+.viz-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:14px;text-align:center;margin-bottom:12px}
+.viz-s{font-size:12px;color:var(--mut);text-align:center;margin-top:10px;font-style:italic}
+.bars{display:flex;align-items:flex-end;justify-content:center;gap:22px;height:200px;margin-bottom:6px}
+.bar{width:110px;height:var(--h);background:linear-gradient(180deg,#e8d3b4,#d9bd93);border-radius:12px 12px 4px 4px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding:8px 6px;text-align:center}
+.bar.hi{background:linear-gradient(180deg,#9b2c45,#7d1d33);color:#fff}
+.bar b{font-family:Montserrat,sans-serif;font-weight:900;font-size:17px}.bar.hi b{font-size:34px}.art .bar b{color:inherit}.art .bar.hi b{color:#fff}.bar{min-height:72px}.bar span{font-size:11px;line-height:1.25;margin-top:4px}
+.months{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.months div{border-radius:10px;padding:8px 2px;text-align:center;font-size:12px;font-weight:700;background:#f1e8db;color:#7a6a6e}
+.months .g{background:#e3f1e6;color:#2f7a48}.months .h{background:#f6dcdc;color:#9a2b3b}
+.legend{display:flex;justify-content:center;gap:12px;margin-top:10px;font-size:12px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:middle}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal div{aspect-ratio:1;border-radius:8px;background:#fff;border:1px solid #eee2d2;font-size:12px;display:flex;align-items:center;justify-content:center;color:#7a6a6e}
+.cal .w{background:none;border:0;font-weight:700;color:var(--wine);font-size:11px;aspect-ratio:auto}
+.cal .m{background:linear-gradient(180deg,#f6d99a,#c9a063);color:#5a3a10;font-weight:900;border:0;box-shadow:0 3px 10px rgba(201,160,99,.5)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.duo div{border-radius:14px;padding:12px;text-align:center;font-size:13px;line-height:1.35}
+.duo .l{background:#f6e3e3;color:#7d1d33}.duo .r{background:#e3f1e6;color:#2f7a48}
+.duo b{display:block;font-size:26px;margin-bottom:4px}.duo strong{display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:12px;margin-bottom:4px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cmp>div{border-radius:14px;padding:12px;background:#fff;border:1px solid #eee2d2}.cmp>div.best{border:2px solid var(--wine)}
+.cmp h5{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:12px;color:var(--wine);margin:0 0 8px;text-align:center}
+.cmp p{margin:0 0 6px!important;font-size:13px}.cmp .y:before{content:"✓ ";color:#2f7a48;font-weight:900}.cmp .n:before{content:"✕ ";color:#b04050;font-weight:900}.cmp .n{color:#9a8a8e}
+.op{margin:22px 0}.op img{width:100%;height:440px;object-fit:cover;object-position:50% 22%;border-radius:22px;display:block;box-shadow:0 14px 40px rgba(125,29,51,.15)}.op figcaption{text-align:center;margin-top:10px;font-size:14px;color:var(--mut)}.op figcaption b{display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:15px}
+/* блоки статьи */
+.art{margin:16px 0}
+.art-head{margin-bottom:0}
+.stp{margin:14px 0;border-radius:22px;overflow:hidden;padding:0 18px 16px;box-shadow:0 10px 30px rgba(125,29,51,.08)}
+.stp-img{display:block;width:calc(100% + 36px);margin:0 -18px 14px;aspect-ratio:16/9;object-fit:cover}
+.stp-1{background:#fff;border:1px solid rgba(201,160,99,.35)}
+.stp-2{background:linear-gradient(160deg,#fbf6fb,#f3eef6 60%,#eef3f8);border:1px solid rgba(201,160,99,.3)}
+.stp-3{background:linear-gradient(160deg,#fff8ea,#fbedd0);border:1px solid rgba(201,160,99,.5)}
+.stp blockquote{background:#fff;border-left:0;border-top:3px solid var(--gold);box-shadow:0 6px 18px rgba(125,29,51,.08);font-style:normal;position:relative;padding-top:22px}
+.stp blockquote:before{content:"“";position:absolute;top:-8px;left:12px;font:900 44px Georgia,serif;color:var(--gold)}
+.art .selfq{margin:14px 0;border:0;border-radius:22px;padding:20px 18px;background:linear-gradient(160deg,#9b2c45,#7d1d33);color:#fff}
+.art .selfq-h{color:#f6d99a;font-size:16px;text-align:center}
+.art .selfq p{color:#fbeff1}
+.art .selfq ul.ch li{background:#fff;color:var(--txt);border-radius:12px;padding:10px 12px 10px 36px;margin:0 0 8px}
+.art .selfq ul.ch li:before{left:12px;top:10px}
+.band-warn{margin:14px 0;border-radius:22px;padding:18px;background:#fff;border:2px solid #e9c9cf}
+.band-warn h3.warn{margin-top:0;justify-content:center}
+.band-warn .fig{margin:12px -18px}
+/* описание услуги */
+.for4 ul.ch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.for4 ul.ch li{margin:0;padding:14px 12px 12px;border-radius:16px;background:linear-gradient(160deg,#fff8ea,#fbedd0);font-size:14px;line-height:1.35;font-weight:600}
+.for4 ul.ch li:nth-child(2),.for4 ul.ch li:nth-child(3){background:linear-gradient(160deg,#fbf6fb,#eef3f8)}
+.for4 ul.ch li:before{position:static;display:block;font-size:22px;margin-bottom:6px;color:inherit}
+.for4 ul.ch li:nth-child(1):before{content:"💸"}.for4 ul.ch li:nth-child(2):before{content:"⏳"}.for4 ul.ch li:nth-child(3):before{content:"🚪"}.for4 ul.ch li:nth-child(4):before{content:"🗓"}
+.gsteps .step{padding:14px;border-radius:16px;margin:0 0 10px}
+.gsteps .step:nth-of-type(odd){background:linear-gradient(160deg,#fff8ea,#fbedd0)}
+.gsteps .step:nth-of-type(even){background:linear-gradient(160deg,#fbf6fb,#eef3f8)}
+.gsteps .step b{background:linear-gradient(135deg,#b8862f,#f3d58b 45%,#c99a3f);color:#4a2c05;width:34px;height:34px;font-size:16px;box-shadow:0 4px 10px rgba(176,122,37,.35)}
+.hbands{background:linear-gradient(160deg,#9b2c45,#7d1d33);color:#fff;border:0}
+.hbands h2{color:#f6d99a}
+.hbands .step{background:rgba(255,255,255,.1);border-radius:14px;padding:12px;margin:0 0 8px}
+.hbands .step b{background:#f6d99a;color:#7d1d33}
+.hbands .step span{color:#f6d99a}
+.tar{background:linear-gradient(160deg,#fbf6fb,#eef3f8);border:1.5px solid rgba(160,170,200,.45)}
+.tar.top{background:linear-gradient(160deg,#fffaf0,#fbeccc);border:2px solid var(--wine)}
+.price-lbl{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);margin-top:14px}
+.timer{background:linear-gradient(160deg,#9b2c45,#7d1d33)!important;color:#fff!important;font-size:15px!important;padding:12px!important;border-radius:14px!important;box-shadow:0 8px 20px rgba(125,29,51,.3)}
+.timer b{display:block;font-family:Montserrat,sans-serif;font-weight:900;font-size:26px;letter-spacing:.06em;color:#f6d99a}
+.bon{position:relative;border:0!important;margin-top:16px!important;padding:26px 14px 10px!important;border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(125,29,51,.12)}
+.bon:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;border-radius:18px 18px 0 0;background:repeating-linear-gradient(90deg,#7d1d33 0 20px,#9b2c45 20px 40px)}
+.bon-h{text-align:center;font-size:17px!important}
+.bi{background:linear-gradient(160deg,#fff8ea,#fbedd0);border-radius:14px;padding:10px}
+.band-warn .quote{font-size:19px;line-height:1.3;margin:14px 0 4px}
+.band-warn .quote small{display:block;margin-top:8px;font-family:Manrope,sans-serif;font-weight:700;font-size:15px;color:var(--txt);text-transform:none}
+.art-end{display:block;margin:14px -18px -18px!important;padding:16px 18px;border-radius:0 0 20px 20px;background:linear-gradient(135deg,#b8862f,#f3d58b 45%,#c99a3f);color:#4a2c05!important;font-size:16px;text-align:center;text-decoration:underline;text-decoration-color:rgba(74,44,5,.4);text-underline-offset:4px}
+.tg-note{font-size:12px;color:var(--mut);text-align:center;margin-top:8px}
+.back{display:block;text-align:center;color:var(--wine);margin-top:18px}
+.sost{margin-top:8px}.sost li{font-size:14px;margin:0 0 6px!important}
+.gsteps .step>div{flex:1;min-width:0}.gsteps .step>div>p{margin:0 0 6px}
+.otz figure{margin:0 0 16px}.otz img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:14px;box-shadow:0 6px 18px rgba(125,29,51,.08)}.otz figcaption{font-size:13px;color:var(--mut);text-align:center;margin-top:8px;font-style:italic}
+.bridge{font-size:14px;margin:6px 0 0!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="kick">Оксана Смирнова · финансовый астролог</div>
+    <h1>Мой денежный год 2027</h1>
+    <p>Разбор только про деньги: ваш денежный потенциал по натальной карте на всю жизнь и ваш денежный 2027 год, чего ждать, где подстраховаться и как выйти на новый уровень дохода</p>
+    <img class="photo" src="img/oksana-kofe.jpg" alt="Оксана Смирнова">
+  </header>
+
+  <article class="art">
+<div class="card art-head">
+    <div class="art-t">3 минуты чтения</div>
+    <h2>Как узнать свой денежный год 2027: три вещи, которые я смотрю в вашей карте</h2>
+    <p class="art-lead">Почему в 2027 году одни выйдут на новый доход, а другие будут работать ещё больше за те же деньги? Дело обычно в двух вещах: в каком деле вы пытаетесь заработать и что год вообще приготовил вам в деньгах</p>
+    <figure class="fig"><img src="img/art-razvilka.jpg" alt=""><figcaption>Один и тот же год можно пройти по двум дорогам: в своём деле и с подстраховкой или наугад</figcaption></figure>
+    <p>Многие ждут «удачный денежный год», как будто он просто случится. За 300 с лишним разборов «Путь Звезды» я увидела другое: <b>деньги растут, когда вы зарабатываете своим способом и знаете, что приносит вам год</b>. Вот три вещи, которые я смотрю, чтобы это совпало</p>
+
+    </div><div class="stp stp-1"><img class="stp-img" src="img/st-kanal.jpg" alt="">
+    <h3><i>1</i>Ваш денежный канал</h3>
+    <p>В натальной карте видно, через что вам проще зарабатывать: через своё дело или через карьеру, в одиночку или через команду, через продажи или через экспертность</p>
+    <blockquote>Мой муж Антон много лет был уверен, что ему подходит только свой бизнес. Доход стоял на уровне до 100 тысяч. В его карте сильный Марс: ему про карьеру, партнёрство и продажи через команду. Он ушёл в карьеру, <b>вырос в доходе в пять раз</b>, стал генеральным директором, и мы купили дом без ипотеки</blockquote>
+    <div class="viz"><div class="viz-h">Доход Антона</div><div class="bars"><div class="bar" style="--h:38%"><b>до 100 тыс</b><span>свой бизнес</span></div><div class="bar hi" style="--h:100%"><b>×5</b><span>карьера по карте: команда и продажи</span></div></div><div class="viz-s">Реальная история из моего канала</div></div>
+    <p>Никакой магии здесь нет. Человек просто перестал зарабатывать «не своим» способом</p>
+
+    </div><div class="stp stp-2"><img class="stp-img" src="img/st-periody.jpg" alt="">
+    <h3><i>2</i>Ваш денежный 2027 год: тенденции и периоды</h3>
+    <p>Дальше я накладываю на вашу карту 2027 год. Главное здесь соляр, карта вашего личного года. Он показывает, что вообще возможно в деньгах в этом году: рост дохода, новый источник заработка или год, где важнее сохранить и укрепить</p>
+    <p>Транзиты, движение планет по вашей карте, уточняют периоды внутри этих тенденций: <b>где деньги идут легче, а где лучше не брать кредит и не рисковать</b></p>
+    <div class="viz"><div class="viz-h">Тенденции года по периодам</div><div class="months"><div>Янв</div><div>Фев</div><div class="g">Мар</div><div class="g">Апр</div><div>Май</div><div class="h">Июн</div><div class="h">Июл</div><div>Авг</div><div class="g">Сен</div><div class="g">Окт</div><div>Ноя</div><div>Дек</div></div><div class="legend"><span><i style="background:#cfe8d5"></i>легче</span><span><i style="background:#f1cfcf"></i>осторожно</span><span><i style="background:#ece0cf"></i>ровно</span></div><div class="viz-s">Пример. В вашем разборе периоды будут свои</div></div>
+    <blockquote>Покажу на себе. Этой осенью ретроградный Сатурн идёт по моему 11 дому, это интернет и аудитория. Охваты просели, как у многих. Я знала об этом заранее, поэтому не паниковала, а увеличила количество роликов. Когда знаешь, откуда трудность, паниковать некогда, ты работаешь</blockquote>
+
+    </div><div class="stp stp-3"><img class="stp-img" src="img/st-dni.jpg" alt="">
+    <h3><i>3</i>Где подстелить соломки: компенсаторика</h3>
+    <p>Компенсаторика это простые действия, которые снижают напряжение трудного периода. Можно подстелить себе соломки и смягчить негативные процессы не только за счёт астрологии, но и за счёт обычной логики. На эту часть разбора клиенты реагируют сильнее всего: прогноз сразу превращается в понятные действия</p>
+    <p>Вот примеры компенсаторики по деньгам из моих разборов:</p>
+    <ul class="ch">
+      <li>кредит в этом году можно, но только на недвижимость</li>
+      <li>кредит на бизнес возможен, если каждая копейка уйдёт в бизнес, а не на покупки</li>
+      <li>тяжёлая планета идёт по зоне ежедневной работы: поменять что-то в работе, пойти за повышением, начать зарабатывать по-другому</li>
+      <li>напряжение по дому и имуществу: заранее сделать ремонт или осмотр машины</li>
+    </ul>
+    <div class="viz"><div class="viz-h">Один и тот же трудный период</div><div class="duo"><div class="l"><b>🌪</b><strong>Без подстраховки</strong>застаёт врасплох и кажется невезением</div><div class="r"><b>🛡</b><strong>С компенсаторикой</strong>вы заранее знаете, где подстелить соломки</div></div><div class="viz-s">Компенсаторика в вашем разборе подбирается под вашу карту</div></div>
+    <p>Денежные дни я тоже рассчитываю, эту систему я полгода проверяла на себе, на муже и на ученицах. Но это дополнение к картине года. Зачем знать отдельные периоды, если не знаешь полный прогноз на год?</p>
+
+    </div><div class="selfq">
+      <div class="selfq-h">Можно ли посмотреть это самой?</div>
+      <p>Частично да. Задайте себе три вопроса:</p>
+      <ul class="ch"><li>через какое дело деньги приходили ко мне легче всего?</li><li>в какие месяцы прошлых лет у меня был денежный рывок, а в какие провал?</li><li>где в прошлом году деньги утекли и можно ли было подстелить соломки заранее?</li></ul>
+      <p>Это уже подсказка. Но точный ответ на 2027 год требует вашего точного времени и места рождения, соляра и расчёта десятков транзитов. Здесь и нужна моя работа</p>
+    </div>
+
+    <div class="band-warn"><h3 class="warn">Что будет, если не знать</h3>
+    <p><b>Год без карты обычно выглядит так:</b> хорошие периоды проходят мимо, потому что вы о них не знали, а трудные приходят внезапно и кажутся невезением. Вы поднимаете цену в «тихий» месяц и решаете, что цену поднимать нельзя. Берёте кредит в напряжённый период и полгода его отрабатываете</p>
+    <p><b>Знать свой денежный год заранее значит успеть подстелить себе соломки.</b> Брать кредит только там, где он работает на вас, поднимать цену в сильный период и спокойно готовиться к тихому</p>
+    <p class="art-end">Поэтому я собрала все три шага в один разбор «Мой денежный год 2027». Ниже рассказываю, что вы получите и как это проходит ↓</p>
+    </div>
+  </article>
+
+  <figure class="op"><img src="img/oksana-shlyapa.jpg" alt="Оксана Смирнова"><figcaption><b>Оксана Смирнова</b>финансовый астролог, больше 300 разборов «Путь Звезды»</figcaption></figure>
+  <section class="card for4">
+    <h2>Это для вас, если</h2>
+    <ul class="ch">
+      <li>доход «то пусто, то густо», и вы не понимаете, от чего это зависит</li>
+      <li>работы всё больше, а денег столько же</li>
+      <li>думаете сменить работу, поднять цену или начать своё дело и хотите понимать, что для этого даёт год</li>
+      <li>хотите планировать деньги на год заранее, а не наугад</li>
+    </ul>
+  </section>
+
+  <section class="card gsteps">
+    <h2>Что я смотрю в вашей карте</h2>
+    <div class="step"><b>1</b><div><span>Ваш денежный потенциал по натальной карте на всю жизнь</span><p>Это полный состав моей консультации «Путь Звезды»:</p>
+      <ul class="ch sost">
+        <li>формула души: ваши сильные и слабые стороны</li>
+        <li>как включить энергию ваших центральных планет</li>
+        <li>где в жизни могут случаться трудности, а где прячется ваша удача</li>
+        <li>какие хобби принесут вам денежный рост</li>
+        <li>стратегия обращения с деньгами: как распоряжаться ими, чтобы они увеличивались</li>
+        <li>таланты, через которые вы будете зарабатывать</li>
+        <li>денежные блоки и как перевести их в суперсилу</li>
+        <li>индивидуальные действия на активацию денежной энергии</li>
+        <li>ваш формат: найм, фриланс, бизнес или инвестиции</li>
+        <li>список навыков, которые нужны для вашего финансового результата</li>
+        <li>ваши денежные ниши</li>
+        <li>предназначение и миссия</li>
+        <li>как проработать напряжения в карте и увеличить финансовую ёмкость</li>
+      </ul></div></div>
+    <div class="step"><b>2</b><p><span>Денежный 2027 год по соляру</span>Что вообще возможно в деньгах в этом году: главная денежная тема, рост дохода, новые источники или время укрепиться</p></div>
+    <div class="step"><b>3</b><p><span>Периоды по транзитам</span>Тенденции внутри года: где деньги идут легче, а где лучше не брать кредит и не рисковать</p></div>
+    <div class="step"><b>4</b><p><span>Компенсаторика</span>Где подстелить соломки и как смягчить трудные периоды не только астрологией, но и логикой</p></div>
+    <div class="step"><b>5</b><p><span>Денежные дни как дополнение</span>Подсказка поверх картины года, в какой момент удобнее продавать, подписывать договор и поднимать цену</p></div>
+  </section>
+
+  <section class="card hbands">
+    <h2>Как это проходит</h2>
+    <div class="step"><b>1</b><p><span>Вы выбираете формат</span>и оплачиваете разбор</p></div>
+    <div class="step"><b>2</b><p><span>Присылаете данные</span>дату, точное время и место рождения и свой главный денежный вопрос на год. Без точного времени рождения я разбор не делаю</p></div>
+    <div class="step"><b>3</b><p><span>Как готовится разбор</span>Персональный разбор я делаю сама, вручную, по вашей карте и записываю голосом. PDF собирается автоматически по моей методике</p></div>
+    <div class="step"><b>4</b><p><span>Вы получаете результат</span>Персональный: голосовой разбор, текстовый файл и обратная связь в переписке по вопросам к разбору. PDF: файл с денежными тенденциями 2027 года. К результату вы возвращаетесь весь год перед каждым важным денежным шагом</p></div>
+  </section>
+
+  <figure class="op"><img src="img/oksana-palto.jpg" alt="Оксана Смирнова"><figcaption><b>«Прогноз не приговор, а карта»</b>мой разбор это план действий на ваш денежный год</figcaption></figure>
+
+  <section class="card otz">
+    <h2>Что пишут после разбора</h2>
+    <figure><img src="img/otzyv-11.jpg" width="932" height="1280" alt="Отзыв после консультации: заработала в 2 раза больше, чем раньше" loading="lazy"><figcaption>После консультации: «заработала в 2 раза больше, чем раньше»</figcaption></figure>
+    <figure><img src="img/otzyv-9.jpg" width="1080" height="969" alt="Голосовой разбор 45:23 и текстовый файл, ответ клиентки" loading="lazy"><figcaption>Голосовой разбор на 45 минут и текстовый файл, ответ клиентки после них</figcaption></figure>
+    <figure><img src="img/otzyv-4.jpg" width="590" height="909" alt="Голосовой отзыв после финансового разбора, клиентке захотелось подарить такой же разбор друзьям" loading="lazy"><figcaption>Отзыв после финансового разбора. В конце клиентка пишет, что ей захотелось подарить такой же разбор друзьям</figcaption></figure>
+    <p class="gift">🎁 Заказываете разбор себе, второй персональный разбор для близкого 7 500 ₽. Напишите мне, и я пришлю сертификат</p>
+    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" data-tg="gift" onclick="g('buy_gift')">Хочу подарить разбор близкому</a>
+  </section>
+
+  <h2 style="text-align:center;margin-top:26px">Выберите формат</h2>
+
+  <section class="tar top">
+    <div class="badge">Персональный разбор</div>
+    <h3>Мой денежный год 2027 · лично со мной</h3>
+    <p class="for">Разбор денежного потенциала по натальной карте на всю жизнь + денежный 2027 год. Делаю сама, голосом</p>
+    <ul class="ch">
+      <li>ваш денежный потенциал на всю жизнь: полный разбор «Путь Звезды»</li>
+      <li>денежный 2027 год по соляру: что возможно в деньгах в этом году</li>
+      <li>периоды года по транзитам: где действовать, а где подстраховаться</li>
+      <li>компенсаторика на напряжённые периоды</li>
+      <li>денежные дни на каждый месяц как дополнение к картине года</li>
+      <li>голосовой разбор, текстовый файл и обратная связь в переписке по вопросам к разбору</li>
+      <li><b>личный трекер «Дорога 2027»</b> по периодам года</li>
+      <li>нужны дата, точное время и место рождения, без точного времени разбор не делаю</li>
+    </ul>
+
+    <div class="trk">
+      <div class="trk-h">Так выглядит ваш трекер</div>
+      <p class="trk-s">Ваш год как дорога. На ней периоды года и подсказки, что в них делать. Нажимаете на точку и видите подсказку, а прожитое отмечаете галочкой</p>
+      <div class="trk-road">
+        <button class="tp" style="left:47%;top:84%" data-i="0"><span>Янв</span></button>
+        <button class="tp" style="left:50%;top:56%" data-i="1"><span>Мар</span></button>
+        <button class="tp" style="left:63%;top:37%" data-i="2"><span>Июн</span></button>
+        <button class="tp" style="left:51%;top:24%" data-i="3"><span>Сен</span></button>
+        <button class="tp" style="left:76%;top:13%" data-i="4"><span>Дек</span></button>
+      </div>
+      <div class="trk-card" id="trkCard"></div>
+      <p class="trk-note">Пример. В вашем трекере будут ваши периоды по вашей карте</p>
+    </div>
+
+    <div class="bon">
+      <div class="bon-h">🎁 Подарки к разбору</div>
+      <div class="bi"><b>📅</b><p><span>Денежные дни в календаре телефона</span>Дополнение к разбору: сильные дни сами встают в ваш календарь, и утром приходит напоминание</p></div>
+      <div class="bi"><b>🌙</b><p><span>Денежные практики на каждое новолуние 2027</span>12 коротких практик, чтобы каждый месяц начинать с намерения про деньги</p></div>
+      <div class="bi"><b>📝</b><p><span>Шпаргалка «Перед большой тратой или договором»</span>Короткий список: что проверить перед подписанием и где лучше подстраховаться</p></div>
+      <div class="bi"><b>🎁</b><p><span>Подарок близкому на Новый год</span>Заказываете разбор себе, второй персональный разбор для близкого 7 500 ₽. Напишите мне, и я пришлю сертификат</p></div>
+    </div>
+
+    <div class="price-lbl">Цена в первые 24 часа</div><div class="price" id="pTop">9 990 ₽<s>15 000 ₽</s></div>
+    <div class="timer" id="timer">⏰ Только 24 часа</div>
+    <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="money_full" onclick="g('buy_full')">Хочу персональный разбор</a>
+  </section>
+
+  <section class="tar">
+    <h3>Прогноз на 2027 · сфера деньги · PDF</h3>
+    <p class="for">Если хотите понять главные денежные тенденции года и действовать самостоятельно</p>
+    <ul class="ch">
+      <li>главные тенденции 2027 года в деньгах: что меняется и что остаётся стабильным</li>
+      <li>где подстраховаться и компенсирующие действия</li>
+      <li>файл собирается автоматически по моей методике: соляр, транзиты, компенсаторика</li>
+      <li>нужны дата, точное время и место рождения, без точного времени файл не собирается</li>
+      <li class="no">без разбора денежного потенциала по натальной карте</li>
+      <li class="no">без голосового разбора и обратной связи</li>
+    </ul>
+    <p class="bridge">PDF показывает главные тенденции денег на год. Если впереди большое решение или нужен ответ на ваш вопрос, выбирайте персональный разбор</p>
+    <div class="price">3 500 ₽</div>
+    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" data-tg="money_pdf" onclick="g('buy_pdf')">Хочу PDF по деньгам</a>
+  </section>
+
+  <a class="back" href="index.html">← Вернуться к моей кармической задаче 2027</a>
+</div>
+<script>
+var PRICES = {pdf:'3 500 ₽', old:'15 000 ₽', first:'9 990 ₽', late:'11 990 ₽', gift:'7 500 ₽'};
+if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.addEventListener('load', function(){ window.scrollTo(0,0); });
+function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} return true; }
+(function(){
+  var D = [
+    ['Январь · старт года','Практика запуска года и главная денежная тема 2027. Ставим цель по доходу на год'],
+    ['Март · сильный денежный период','Хорошее время поднять цену и запустить продажи'],
+    ['Июнь · напряжённый период','Не брать новые кредиты на эмоциях. Компенсаторика: пересмотреть траты и закрыть старые долги'],
+    ['Сентябрь · окно для роста','Время просить повышение или предлагать большой проект'],
+    ['Декабрь · итоги года','Подводим итоги и готовим денежный план на 2028']
+  ];
+  var pts = document.querySelectorAll('.tp'), card = document.getElementById('trkCard'), done = {};
+  function show(i){
+    pts.forEach(function(p){ p.classList.toggle('act', +p.dataset.i === i && !done[i]); });
+    card.innerHTML = '<b>' + D[i][0] + '</b>' + D[i][1] + '<label><input type="checkbox" ' + (done[i] ? 'checked' : '') + '> Прожила этот период</label>';
+    card.querySelector('input').onchange = function(e){ done[i] = e.target.checked; pts[i].classList.toggle('done', done[i]); pts[i].classList.remove('act'); };
+  }
+  pts.forEach(function(p){ p.onclick = function(){ show(+p.dataset.i); }; });
+  show(0);
+})();
+(function(){
+  var KEY = 'karma27_start', LEN = 24*3600*1000, start;
+  try{ start = +localStorage.getItem(KEY); if(!start){ start = Date.now(); localStorage.setItem(KEY, start); } }catch(e){ start = Date.now(); }
+  var t = document.getElementById('timer'), p = document.getElementById('pTop');
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function tick(){
+    var left = start + LEN - Date.now();
+    if(left <= 0){ p.innerHTML = PRICES.late + '<s>' + PRICES.old + '</s>'; t.textContent = 'Время спеццены вышло'; var pl = document.querySelector('.price-lbl'); if(pl) pl.style.display = 'none'; return; }
+    var h = Math.floor(left/3600000), m = Math.floor(left%3600000/60000), s = Math.floor(left%60000/1000);
+    t.innerHTML = '⏰ Цена ' + PRICES.first + ' только 24 часа. Осталось<b>' + pad(h) + ':' + pad(m) + ':' + pad(s) + '</b>';
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
+<script>
+(function(){
+  var U = 'https://t.me/okssmi?text=';
+  var late = function(){ var st = 0; try{ st = +localStorage.getItem('karma27_start'); }catch(e){} return st && Date.now() - st > 24*3600*1000; };
+  function msg(k){
+    var full = late() ? PRICES.late : 'спеццене ' + PRICES.first;
+    return {
+      money_pdf: 'Здравствуйте, Оксана! Хочу PDF-прогноз на 2027 год по сфере: деньги, ' + PRICES.pdf,
+      money_full: 'Здравствуйте, Оксана! Хочу персональный разбор «Мой денежный год 2027» лично с вами по ' + full,
+      gift: 'Здравствуйте, Оксана! Хочу подарить близкому второй персональный разбор за ' + PRICES.gift
+    }[k];
+  }
+  document.querySelectorAll('a[data-tg]').forEach(function(a){
+    a.href = U + encodeURIComponent(msg(a.getAttribute('data-tg')));
+    var n = document.createElement('div'); n.className = 'tg-note'; n.textContent = '💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»';
+    a.parentNode.insertBefore(n, a.nextSibling);
+  });
+})();
+</script>
+</body>
+</html>
