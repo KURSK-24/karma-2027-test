@@ -605,6 +605,7 @@
   var DOC = 'Конечно, карта не заменяет врачей и обследования.';
 
 
+  function boldLead(t) { var m = t.match(/^([^:!?]{3,90}[:!])\s/); return m ? '<b>' + m[1] + '</b>' + t.slice(m[1].length) : t; }
   function stepWrap(n, html) { return '<div class="step" data-step="' + n + '">' + html + '</div>'; }
 
   function build(r) {
@@ -613,7 +614,9 @@
     var sf = SEASON[axStartSeason].from + ' ' + ax.start.split('-')[0];
     var out = {};
     // шаг 0: эпитет даты и одна-две живые фразы (R68: без градусов, без названий фаз и коридоров)
-    var z = r.rare ? ['Редкая дата!', 'Мощная дата!'][(r.sunDeg + r.moonAge) % 2] : ['Ого, какая дата!', 'Вот это да!', 'Сильная дата!'][(r.sunDeg + r.moonAge) % 3];
+    var zh = r.y * 13 + r.m * 31 + r.d * 7 + r.sunDeg + r.moonAge;
+    var zp = r.rare ? ['Редкая дата!', 'Мощная дата!', 'Исключительная дата!', 'Дата с особой силой!'] : ['Ого, какая дата!', 'Вот это дата!', 'Уникальная дата!', 'Отличная дата!', 'Сильная дата!', 'Особенная дата!', 'Яркая дата!', 'Говорящая дата!'];
+    var z = '<b>' + zp[zh % zp.length] + '</b>';
     var ph = PHASE_HUMAN[r.moonPhase], ch = PHASE_CHAR[r.moonPhase];
     var moonTxt = r.syzygy === 'new' ? 'Вы родились в день новолуния, и ' + ch : r.syzygy === 'full' ? 'Вы родились в полнолуние, и ' + ch :
       r.moonAge >= 27 ? 'Вы родились ' + ph + ', за ' + dayW(r.moonToNew) + ' до новолуния, и ' + ch :
@@ -634,13 +637,13 @@
     // шаг 1: сцены по возрасту в 2026 (R70)
     var cd = new Date(r.clock), a26 = cd.getUTCFullYear() - r.y - ((cd.getUTCMonth() + 1 < r.m || (cd.getUTCMonth() + 1 === r.m && cd.getUTCDate() < r.d)) ? 1 : 0);
     var scs = SCENE_AGE[ageGroup(a26)][r.snSign];
-    out.task += stepWrap(1, '<p>' + SCENE_LEAD[r.snSign] + Object.keys(scs).map(function (k) { return ' <span data-scene="' + k + '">' + scs[k] + '</span>'; }).join('') + ' Узнаёте себя?</p>');
+    out.task += stepWrap(1, '<p>' + boldLead(SCENE_LEAD[r.snSign]) + Object.keys(scs).map(function (k) { return ' <span data-scene="' + k + '">' + scs[k] + '</span>'; }).join('') + ' Узнаёте себя?</p>');
     // шаг 2: годы круга аккордеоном, у каждого года своя сцена (R64-R66), теория плашкой
     var th = THEME[r.hSNnatal];
     var all = r.returns.concat(r.halfReturns).sort(function (a, b) { return a.ym < b.ym ? -1 : 1; });
     var past = all.filter(function (e) { return e.ym <= r.clockYm; }), fut = all.filter(function (e) { return e.ym > r.clockYm && e.ym <= '2027-12'; });
     var rows = past.concat(fut);
-    var s2 = '<p>Ваша кармическая задача проходит через ' + THEME_INTRO[th] + ', и жизнь не раз возвращала вас здесь к похожему выбору.</p><p class="yr-hint">Нажмите на плюс и вспомните каждый год</p><div class="yrs">';
+    var s2 = '<p><b>Ваша кармическая задача проходит через ' + THEME_INTRO[th] + '</b>, и жизнь не раз возвращала вас здесь к похожему выбору.</p><p class="yr-hint">Нажмите на плюс и вспомните каждый год</p><div class="yrs">';
     rows.forEach(function (e) {
       var isFut = e.ym > r.clockYm, is27 = e.ym.indexOf('2027-') === 0, pm = e.ym.split('-'), j = slotOf(e.age);
       var back = r.halfReturns.indexOf(e) >= 0;
@@ -657,7 +660,7 @@
     out.task += stepWrap(2, s2);
     // шаг 3: мостик со сферой задачи этой даты (R76) и две кнопки
     var eP = ax.end.split('-'), nf = fut[0];
-    var s3 = 'Ваш круг идёт через ' + THEME_BRIDGE[th] + (nf ? ', и следующий его виток придёт ' + whenIn(nf) : '') + '. Ось, на которой стоит ваша задача, держится до ' + MON_GEN[+eP[1] - 1] + ' ' + eP[0] + ', и до её конца у вас ' + ax.monthsLeft + ' ' + plural(ax.monthsLeft, 'месяц', 'месяца', 'месяцев') + '. Проживёте их вслепую, и сценарий, скорее всего, повторится. Увидите заранее, и 2027 пройдёт мягче. Где подстелить соломку в каждой сфере, я разбираю в личном прогнозе на 2027. ' +
+    var s3 = '<b>Ваш круг идёт через ' + THEME_BRIDGE[th] + (nf ? ', и следующий его виток придёт ' + whenIn(nf) : '') + '.</b> Ось, на которой стоит ваша задача, держится до ' + MON_GEN[+eP[1] - 1] + ' ' + eP[0] + ', и до её конца у вас ' + ax.monthsLeft + ' ' + plural(ax.monthsLeft, 'месяц', 'месяца', 'месяцев') + '. Проживёте их вслепую, и сценарий, скорее всего, повторится. Увидите заранее, и 2027 пройдёт мягче. Где подстелить соломку в каждой сфере, я разбираю в личном прогнозе на 2027. ' +
       (th === 'money' ? 'Начните с «Моего денежного года», он как раз об этом' : 'А если главный вопрос в деньгах, начните с «Моего денежного года»');
     var bY = '<a class="btn" href="year.html" onclick="return window.__g(\'year\')">Прогноз на 2027 по всем сферам</a>', bM = '<a class="btn" href="money.html" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
     out.task += stepWrap(3, '<p>' + s3 + '</p><div class="paid">' + (th === 'money' ? bM + bY : bY + bM) + '</div>');
