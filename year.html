@@ -142,6 +142,11 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 @keyframes sheen{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}
 @media (prefers-reduced-motion:reduce){.case .ba div.best:after{animation:none}}
 .to-price{position:fixed;left:50%;bottom:14px;transform:translate(-50%,140%);width:calc(100% - 32px);max-width:440px;z-index:50;display:block;text-align:center;text-decoration:none;border-radius:14px;padding:15px 16px;font:800 16px Manrope,sans-serif;overflow:hidden;transition:transform .35s ease;background:linear-gradient(135deg,#fdfbf7,#f1e6f0 30%,#e6eef6 50%,#fbf3e6 70%,#f0e4ea);color:var(--wine);border:1px solid rgba(201,160,99,.55);box-shadow:0 10px 26px rgba(125,29,51,.2),inset 0 1px 0 #fff}.to-price.on{transform:translate(-50%,0)}.to-price:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shp 3.2s ease-in-out infinite;pointer-events:none}@keyframes shp{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}@media (prefers-reduced-motion:reduce){.to-price:after{animation:none}.to-price{transition:none}}body{padding-bottom:84px}
+.pcmp{width:100%;border-collapse:separate;border-spacing:0;margin:6px 0 10px;font-size:13.5px;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.pcmp th{background:var(--wine);color:#fff;font-weight:700;padding:8px 6px;font-size:13px}.pcmp th:first-child{background:var(--wine)}
+.pcmp td{padding:8px 6px;border-top:1px solid var(--line);vertical-align:top;text-align:center}.pcmp td:first-child{text-align:left;color:var(--txt);width:46%}
+.pnote{background:var(--cream);border-radius:10px;padding:10px 12px;font-size:14.5px;margin:0 0 10px}
+.pgrp{font-weight:800;color:var(--wine);margin:14px 0 2px}
 </style>
 </head>
 <body>
@@ -292,24 +297,32 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   </section>
 
   <section class="tar">
-    <h3 id="tA">Прогноз на 2027 · PDF</h3>
-    <p class="for">Одна сфера на выбор или обзор всего года</p>
+    <h3 id="tA">PDF-прогноз на 2027</h3>
+    <p class="for">Два формата по одной цене. Выберите, что вам нужно: <b>глубоко про одну тему</b> или <b>коротко про весь год</b></p>
+    <table class="pcmp">
+      <tr><th></th><th>Одна сфера</th><th>Весь год</th></tr>
+      <tr><td>Сколько сфер</td><td><b>одна на выбор</b></td><td><b>все</b></td></tr>
+      <tr><td>Главная тема года по соляру</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Что меняется и что стабильно</td><td>✅ подробно</td><td>✅ по абзацу на сферу</td></tr>
+      <tr><td>Периоды: когда действовать, когда подстраховаться</td><td>✅</td><td>❌</td></tr>
+      <tr><td>Компенсаторика: что делать в трудные периоды</td><td>✅</td><td>❌</td></tr>
+    </table>
+    <p class="pnote"><b>Одна сфера</b> даёт план: что будет, когда и что делать. <b>Весь год</b> даёт общую картину: что вас ждёт в каждой сфере</p>
     <ul class="ch">
-      <li>главные тенденции 2027 года: что меняется и что остаётся стабильным</li>
-      <li>где подстраховаться и компенсирующие действия</li>
       <li><b>составляется компьютерной программой</b> по вашим данным и по моей методике: соляр, транзиты, компенсаторика</li>
-      <li><b>кратко, ёмко и по полочкам:</b> тенденции года без лишних слов</li>
       <li><b>быстро и недорого</b> по сравнению с личной консультацией</li>
       <li>нужны дата, точное время и место рождения, без точного времени файл не собирается</li>
       <li class="no">без голосового разбора и обратной связи</li>
     </ul>
-    <p class="bridge">PDF показывает главные тенденции сферы или года. Если впереди большое решение или нужен ответ на ваш вопрос, выбирайте персональный разбор</p>
     <div class="price">3 500 ₽</div>
+    <div class="pgrp">Глубоко про одну сферу:</div>
     <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_money" onclick="g('buy_sphere')">PDF: деньги</a>
     <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_career" onclick="g('buy_sphere')">PDF: карьера и бизнес</a>
     <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_love" onclick="g('buy_sphere')">PDF: отношения</a>
     <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_health" onclick="g('buy_sphere')">PDF: здоровье и силы</a>
-    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_all" onclick="g('buy_sphere')">PDF: обзор всего 2027 года</a>
+    <div class="pgrp">Или коротко про весь год:</div>
+    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_all" onclick="g('buy_overview')">PDF: обзор всего 2027 года</a>
+    <p class="bridge">Если впереди большое решение или нужен ответ на ваш вопрос, выбирайте персональный разбор</p>
     <div class="tg-note">💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»</div>
   </section>
 
@@ -349,7 +362,7 @@ function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n)
       year_pdf_career: pdf + 'карьера и бизнес, ' + PRICES.pdf,
       year_pdf_love: pdf + 'отношения, ' + PRICES.pdf,
       year_pdf_health: pdf + 'здоровье и силы, ' + PRICES.pdf,
-      year_pdf_all: 'Здравствуйте, Оксана! Хочу PDF-прогноз на 2027 год, обзор на весь 2027 год по всем сферам, ' + PRICES.pdf,
+      year_pdf_all: 'Здравствуйте, Оксана! Хочу PDF «Обзор всего 2027 года» (коротко по всем сферам), ' + PRICES.pdf,
       year_full: 'Здравствуйте, Оксана! Хочу персональный прогноз на 2027 год по всем сферам лично с вами по ' + full,
       gift: 'Здравствуйте, Оксана! Хочу подарить близкому второй персональный разбор за ' + PRICES.gift
     }[k];
