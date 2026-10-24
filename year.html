@@ -137,6 +137,10 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .case-t{font-family:Montserrat,sans-serif;font-weight:800;font-size:17px;color:var(--wine);line-height:1.3;margin:0 0 10px}
 .case p{margin:0 0 8px}.case p:last-child{margin-bottom:0}
 .case .ba{display:grid;gap:8px;margin:6px 0 10px}.case .ba div{background:#fff;border-radius:10px;padding:10px 12px}.case .ba b{color:var(--wine)}
+.case .ba div.best{position:relative;overflow:hidden;background:linear-gradient(135deg,#fdfbf7,#f1e6f0 30%,#e6eef6 50%,#fbf3e6 70%,#f0e4ea);border:1.5px solid rgba(201,160,99,.7);box-shadow:0 10px 26px rgba(125,29,51,.15),inset 0 1px 0 #fff}
+.case .ba div.best:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.8),transparent);animation:sheen 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes sheen{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}
+@media (prefers-reduced-motion:reduce){.case .ba div.best:after{animation:none}}
 </style>
 </head>
 <body>
@@ -173,7 +177,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <p class="case-t">Вы планируете крупную покупку в 2027</p>
       <div class="ba">
         <div><b>Прогноз только по датам</b> скажет: «март благоприятен для покупок». Вы берёте кредит в марте и не знаете, что весь ваш год про то, чтобы сохранить деньги</div>
-        <div><b>Мой прогноз отвечает на три вопроса:</b><br>1. <b>Соляр:</b> ваш год в деньгах про рост или про то, чтобы сохранить<br>2. <b>Транзиты:</b> в какие месяцы деньги идут легче, а где лучше не рисковать<br>3. <b>Компенсаторика:</b> как подстраховаться, например отложить крупную покупку на спокойный период</div>
+        <div class="best"><b>Мой прогноз отвечает на три вопроса:</b><br>1. <b>Соляр:</b> ваш год в деньгах про рост или про то, чтобы сохранить<br>2. <b>Транзиты:</b> в какие месяцы деньги идут легче, а где лучше не рисковать<br>3. <b>Компенсаторика:</b> как подстраховаться, например отложить крупную покупку на спокойный период</div>
       </div>
     </div>
 
