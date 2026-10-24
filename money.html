@@ -156,6 +156,11 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .t3 td:last-child{background:#fbf1e1}
 .t3 tr.pr td{font-family:Montserrat,sans-serif;font-weight:900;color:var(--wine);font-size:12px;white-space:nowrap}
 .t3 tr.sum td{font-weight:700;color:var(--wine)}
+.trk-do{font-weight:800;color:var(--wine);margin:10px 0 4px;font-size:14px}
+.trk-card label{display:flex;gap:8px;align-items:flex-start;margin:6px 0 0;font-weight:600}
+.trk-card label input{margin-top:4px;flex:none}
+.trk-prog{position:relative;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;margin:0 0 10px;font-size:14px;overflow:hidden;text-align:center}
+.trk-prog b{color:var(--wine)}.trk-prog i{position:absolute;left:0;top:0;bottom:0;background:rgba(201,160,99,.25);transition:width .3s}.trk-prog span{position:relative}
 </style>
 </head>
 <body>
@@ -308,7 +313,8 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
     <div class="trk">
       <div class="trk-h">Так выглядит ваш трекер</div>
-      <p class="trk-s">Ваш год как дорога. На ней периоды года и подсказки, что в них делать. Нажимаете на точку и видите подсказку, а прожитое отмечаете галочкой</p>
+      <p class="trk-s">Ваш год как дорога. На ней периоды года и <b>конкретные шаги, что в них сделать</b>. Нажимаете на точку, видите шаги и отмечаете сделанное. Так видно, что год идёт по плану</p>
+      <div class="trk-prog" id="trkProg"></div>
       <div class="trk-road">
         <button class="tp" style="left:47%;top:84%" data-i="0"><span>Янв</span></button>
         <button class="tp" style="left:50%;top:56%" data-i="1"><span>Мар</span></button>
@@ -358,20 +364,27 @@ if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.
 function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} return true; }
 (function(){
   var D = [
-    ['Январь · старт года','Практика запуска года и главная денежная тема 2027. Ставим цель по доходу на год'],
-    ['Март · сильный денежный период','Хорошее время поднять цену и запустить продажи'],
-    ['Июнь · напряжённый период','Не брать новые кредиты на эмоциях. Компенсаторика: пересмотреть траты и закрыть старые долги'],
-    ['Сентябрь · окно для роста','Время просить повышение или предлагать большой проект'],
-    ['Декабрь · итоги года','Подводим итоги и готовим денежный план на 2028']
+    ['Январь · старт года','Главная денежная тема 2027 и цель на год',['Сделать практику запуска года','Записать цель по доходу на 2027']],
+    ['Март · сильный денежный период','Хорошее время для роста дохода',['Пересмотреть свои цены','Запустить продажи или предложить услугу']],
+    ['Июнь · напряжённый период','Здесь важнее сохранить, чем рисковать',['Не брать новые кредиты на эмоциях','Пересмотреть траты и закрыть старые долги']],
+    ['Сентябрь · окно для роста','Время для больших шагов в работе',['Попросить повышение или предложить большой проект']],
+    ['Декабрь · итоги года','Подводим итоги и смотрим вперёд',['Подвести денежные итоги года','Составить денежный план на 2028']]
   ];
-  var pts = document.querySelectorAll('.tp'), card = document.getElementById('trkCard'), done = {};
+  var pts = document.querySelectorAll('.tp'), card = document.getElementById('trkCard'), prog = document.getElementById('trkProg'), done = {};
+  var total = D.reduce(function(n, d){ return n + d[2].length; }, 0);
+  function cnt(i){ var c = 0; D[i][2].forEach(function(_, j){ if(done[i + '-' + j]) c++; }); return c; }
+  function upd(){
+    var all = 0; D.forEach(function(_, i){ var c = cnt(i); all += c; pts[i].classList.toggle('done', c === D[i][2].length); });
+    prog.innerHTML = '<i style="width:' + Math.round(all / total * 100) + '%"></i><span>Сделано шагов года: <b>' + all + ' из ' + total + '</b></span>';
+  }
   function show(i){
-    pts.forEach(function(p){ p.classList.toggle('act', +p.dataset.i === i && !done[i]); });
-    card.innerHTML = '<b>' + D[i][0] + '</b>' + D[i][1] + '<label><input type="checkbox" ' + (done[i] ? 'checked' : '') + '> Прожила этот период</label>';
-    card.querySelector('input').onchange = function(e){ done[i] = e.target.checked; pts[i].classList.toggle('done', done[i]); pts[i].classList.remove('act'); };
+    pts.forEach(function(p){ p.classList.toggle('act', +p.dataset.i === i); });
+    card.innerHTML = '<b>' + D[i][0] + '</b>' + D[i][1] + '<div class="trk-do">Что сделать в этот период:</div>' +
+      D[i][2].map(function(t, j){ return '<label><input type="checkbox" data-k="' + i + '-' + j + '" ' + (done[i + '-' + j] ? 'checked' : '') + '> ' + t + '</label>'; }).join('');
+    card.querySelectorAll('input').forEach(function(inp){ inp.onchange = function(e){ done[e.target.getAttribute('data-k')] = e.target.checked; upd(); }; });
   }
   pts.forEach(function(p){ p.onclick = function(){ show(+p.dataset.i); }; });
-  show(0);
+  show(0); upd();
 })();
 (function(){
 })();
