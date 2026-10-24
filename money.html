@@ -147,6 +147,15 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .case .ba{display:grid;gap:8px;margin:6px 0 10px}.case .ba div{background:#fff;border-radius:10px;padding:10px 12px}.case .ba b{color:var(--wine)}
 .to-price{position:fixed;left:50%;bottom:14px;transform:translate(-50%,140%);width:calc(100% - 32px);max-width:440px;z-index:50;display:block;text-align:center;text-decoration:none;border-radius:14px;padding:15px 16px;font:800 16px Manrope,sans-serif;overflow:hidden;transition:transform .35s ease;background:linear-gradient(135deg,#b8862f,#f3d58b 35%,#c99a3f 55%,#f6dfa2 75%,#b07a25);color:#4a2c05;box-shadow:0 10px 26px rgba(176,122,37,.45);text-shadow:0 1px 0 rgba(255,255,255,.4)}.to-price.on{transform:translate(-50%,0)}.to-price:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shp 3.2s ease-in-out infinite;pointer-events:none}@keyframes shp{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}@media (prefers-reduced-motion:reduce){.to-price:after{animation:none}.to-price{transition:none}}body{padding-bottom:84px}
 .upsell{background:var(--cream);border-radius:12px;padding:12px 14px;font-size:14.5px;margin:12px 0 0}.upsell a{color:var(--wine);font-weight:700}
+.fmt3{margin:6px 0 16px}
+.t3{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:11.5px;overflow-wrap:anywhere;hyphens:auto;line-height:1.35;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.t3 th{background:var(--wine);color:#fff;font-weight:800;padding:8px 3px;font-size:11px;vertical-align:bottom}
+.t3 th:last-child{background:linear-gradient(135deg,#b8862f,#e9c47a 50%,#b07a25);color:#4a2c05}
+.t3 td{padding:7px 3px;border-top:1px solid var(--line);text-align:center;vertical-align:top}
+.t3 th:first-child,.t3 td:first-child{width:31%}.t3 td:first-child{text-align:left;font-weight:600;padding-left:7px}
+.t3 td:last-child{background:#fbf1e1}
+.t3 tr.pr td{font-family:Montserrat,sans-serif;font-weight:900;color:var(--wine);font-size:12px;white-space:nowrap}
+.t3 tr.sum td{font-weight:700;color:var(--wine)}
 </style>
 </head>
 <body>
@@ -267,6 +276,20 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   </section>
 
   <h2 id="tarify" style="text-align:center;margin-top:26px;scroll-margin-top:16px">Выберите формат</h2>
+  <div class="fmt3">
+    <table class="t3">
+      <tr><th></th><th>PDF</th><th>Прогноз на год</th><th>Денежный год</th></tr>
+      <tr class="pr"><td>Цена</td><td>3 990 ₽</td><td>7 990 ₽</td><td>13 990 ₽</td></tr>
+      <tr><td>Все сферы 2027 года</td><td>✅</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Периоды и компенсаторика</td><td>✅<br>кратко</td><td>✅<br>подробно</td><td>✅<br>подробно</td></tr>
+      <tr><td>Кто делает</td><td>программа по моей методике</td><td>я сама</td><td>я сама</td></tr>
+      <tr><td>Голосовой разбор и обратная связь</td><td>❌</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Деньги по натальной карте на всю жизнь («Путь Звезды»)</td><td>❌</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Трекер «Дорога 2027» и денежные бонусы</td><td>❌</td><td>❌</td><td>✅</td></tr>
+      <tr class="sum"><td>Итого</td><td>картина года в файле</td><td>одна консультация: год</td><td>две консультации: год и деньги на всю жизнь</td></tr>
+    </table>
+  </div>
+
 
   <section class="tar top">
     <div class="badge">Персональный разбор</div>
