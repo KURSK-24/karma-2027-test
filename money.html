@@ -387,7 +387,7 @@ function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n)
   });
 })();
 </script>
-<a class="to-price" id="toPrice" href="#tarify">Условия и цена ↓</a>
+<a class="to-price" id="toPrice" href="#tarify">Мой денежный год 2027 ↓</a>
 <script>(function(){var b=document.getElementById('toPrice'),t=document.getElementById('tarify');if(!b||!t)return;var seen=false;function upd(){var r=t.getBoundingClientRect(),past=window.scrollY>window.innerHeight*0.6;b.classList.toggle('on',past&&!seen&&r.top>window.innerHeight*0.5)}if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)seen=true;else if(x.boundingClientRect.top>0)seen=false});upd()},{threshold:0}).observe(t.parentNode.querySelector('.tar')||t)}window.addEventListener('scroll',upd,{passive:true});upd();b.addEventListener('click',function(ev){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})})})();</script>
 </body>
 </html>
