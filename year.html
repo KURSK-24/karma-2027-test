@@ -141,6 +141,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .case .ba div.best:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.8),transparent);animation:sheen 3.2s ease-in-out infinite;pointer-events:none}
 @keyframes sheen{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}
 @media (prefers-reduced-motion:reduce){.case .ba div.best:after{animation:none}}
+.to-price{position:fixed;left:50%;bottom:14px;transform:translate(-50%,140%);width:calc(100% - 32px);max-width:440px;z-index:50;display:block;text-align:center;text-decoration:none;border-radius:14px;padding:15px 16px;font:800 16px Manrope,sans-serif;overflow:hidden;transition:transform .35s ease;background:linear-gradient(135deg,#fdfbf7,#f1e6f0 30%,#e6eef6 50%,#fbf3e6 70%,#f0e4ea);color:var(--wine);border:1px solid rgba(201,160,99,.55);box-shadow:0 10px 26px rgba(125,29,51,.2),inset 0 1px 0 #fff}.to-price.on{transform:translate(-50%,0)}.to-price:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shp 3.2s ease-in-out infinite;pointer-events:none}@keyframes shp{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}@media (prefers-reduced-motion:reduce){.to-price:after{animation:none}.to-price{transition:none}}body{padding-bottom:84px}
 </style>
 </head>
 <body>
@@ -268,7 +269,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <figure><img src="img/otzyv-7.jpg" width="878" height="1174" alt="Отзыв коллеги-астролога после голосового разбора" loading="lazy"><figcaption>Отзыв коллеги-астролога: «каждому астрологу свой астролог»</figcaption></figure>
   </section>
 
-  <h2 style="text-align:center;margin-top:26px">Выберите формат</h2>
+  <h2 id="tarify" style="text-align:center;margin-top:26px;scroll-margin-top:16px">Выберите формат</h2>
 
   <section class="tar top">
     <div class="badge">Персональный разбор</div>
@@ -359,5 +360,7 @@ function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n)
   });
 })();
 </script>
+<a class="to-price" id="toPrice" href="#tarify">Условия и цена ↓</a>
+<script>(function(){var b=document.getElementById('toPrice'),t=document.getElementById('tarify');if(!b||!t)return;var seen=false;function upd(){var r=t.getBoundingClientRect(),past=window.scrollY>window.innerHeight*0.6;b.classList.toggle('on',past&&!seen&&r.top>window.innerHeight*0.5)}if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)seen=true;else if(x.boundingClientRect.top>0)seen=false});upd()},{threshold:0}).observe(t.parentNode.querySelector('.tar')||t)}window.addEventListener('scroll',upd,{passive:true});upd();b.addEventListener('click',function(ev){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})})})();</script>
 </body>
 </html>
