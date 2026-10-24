@@ -675,7 +675,7 @@
         else if (hp) tr = 'В тот год ещё и ' + hp;
         else if (gp) tr = 'При этом ' + gp;
         t = cap(whenIn(e)) + ', когда вам было ' + ageW(e.age) + ', ' + SC2[hS][jj] + (tr ? '. ' + tr : '');
-        if (firstPast) { t += '. Ваша Луна ' + SIGNS_IN[r.moonSel] + ' подсказывает, как вы это переживали: ' + MOON2[r.moonSel]; firstPast = false; }
+        if (firstPast) { t += '. По дате видно, как вы это переживали: ' + MOON2[r.moonSel]; firstPast = false; }
       }
       s2 += '<details class="yr"><summary><span>' + MON_NOM[+pm[1] - 1] + ' ' + pm[0] + ' · вам ' + ageW(e.age) + (is27 ? ' · круг замыкается' : '') + '</span></summary><p>' + t + '</p></details>';
     });
