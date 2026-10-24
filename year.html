@@ -147,6 +147,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .pcmp td{padding:8px 6px;border-top:1px solid var(--line);vertical-align:top;text-align:center}.pcmp td:first-child{text-align:left;color:var(--txt);width:46%}
 .pnote{background:var(--cream);border-radius:10px;padding:10px 12px;font-size:14.5px;margin:0 0 10px}
 .pgrp{font-weight:800;color:var(--wine);margin:14px 0 2px}
+.upsell{background:var(--cream);border-radius:12px;padding:12px 14px;font-size:14.5px;margin:12px 0 0}.upsell a{color:var(--wine);font-weight:700}
 </style>
 </head>
 <body>
@@ -278,7 +279,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
   <section class="tar top">
     <div class="badge">Персональный разбор</div>
-    <h3>Весь 2027 год · лично со мной</h3>
+    <h3>Прогноз на весь 2027 год · лично со мной</h3>
     <p class="for">Все сферы года. Разбор делаю сама, голосом, по вашей карте</p>
     <ul class="ch">
       <li>главная тема и главные проверки года по соляру: что вообще возможно в 2027</li>
@@ -289,87 +290,53 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>обратная связь в переписке по вопросам к разбору</li>
       <li>нужны дата, точное время и место рождения, без точного времени прогноз не делаю</li>
     </ul>
-    <div class="price-lbl">Цена в первые 24 часа</div><div class="price" id="pTop">9 990 ₽<s>15 000 ₽</s></div>
-    <div class="timer" id="timer">⏰ Только 24 часа</div>
+    <div class="price">7 990 ₽</div>
     <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_full" onclick="g('buy_year')">Хочу прогноз на весь 2027 год</a>
-    <p class="gift">🎁 Подарок близкому на Новый год. Заказываете разбор себе, второй персональный разбор для близкого 7 500 ₽. Напишите мне, и я пришлю сертификат</p>
-    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" data-tg="gift" onclick="g('buy_gift')">Хочу подарить разбор близкому</a>
+    <p class="upsell">Хотите ещё и разбор своего денежного потенциала по натальной карте на всю жизнь? Это <a href="money.html">«Мой денежный год 2027»</a>, в нём уже есть этот полный прогноз · 13 990 ₽</p>
   </section>
 
   <section class="tar">
-    <h3 id="tA">PDF-прогноз на 2027</h3>
-    <p class="for">Два формата по одной цене. Выберите, что вам нужно: <b>глубоко про одну тему</b> или <b>коротко про весь год</b></p>
-    <table class="pcmp">
-      <tr><th></th><th>Одна сфера</th><th>Весь год</th></tr>
-      <tr><td>Сколько сфер</td><td><b>одна на выбор</b></td><td><b>все</b></td></tr>
-      <tr><td>Главная тема года по соляру</td><td>✅</td><td>✅</td></tr>
-      <tr><td>Что меняется и что стабильно</td><td>✅ подробно</td><td>✅ по абзацу на сферу</td></tr>
-      <tr><td>Периоды: когда действовать, когда подстраховаться</td><td>✅</td><td>❌</td></tr>
-      <tr><td>Компенсаторика: что делать в трудные периоды</td><td>✅</td><td>❌</td></tr>
-    </table>
-    <p class="pnote"><b>Одна сфера</b> даёт план: что будет, когда и что делать. <b>Весь год</b> даёт общую картину: что вас ждёт в каждой сфере</p>
+    <h3 id="tA">PDF-прогноз на весь 2027 год</h3>
+    <p class="for">Все сферы года в одном файле, без моего личного разбора</p>
     <ul class="ch">
+      <li><b>все сферы года:</b> деньги, работа, любовь, семья и дом, дети, здоровье</li>
+      <li><b>главные периоды года:</b> когда действовать, а когда подстраховаться</li>
+      <li><b>компенсаторика:</b> что делать в трудные периоды</li>
       <li><b>составляется компьютерной программой</b> по вашим данным и по моей методике: соляр, транзиты, компенсаторика</li>
+      <li><b>кратко, ёмко и по полочкам:</b> весь год в одном файле</li>
       <li><b>быстро и недорого</b> по сравнению с личной консультацией</li>
       <li>нужны дата, точное время и место рождения, без точного времени файл не собирается</li>
-      <li class="no">без голосового разбора и обратной связи</li>
+      <li class="no">без моего голосового разбора и обратной связи</li>
     </ul>
-    <div class="price">3 500 ₽</div>
-    <div class="pgrp">Глубоко про одну сферу:</div>
-    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_money" onclick="g('buy_sphere')">PDF: деньги</a>
-    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_career" onclick="g('buy_sphere')">PDF: карьера и бизнес</a>
-    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_love" onclick="g('buy_sphere')">PDF: отношения</a>
-    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_health" onclick="g('buy_sphere')">PDF: здоровье и силы</a>
-    <div class="pgrp">Или коротко про весь год:</div>
-    <a class="btn ghost pdfb" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf_all" onclick="g('buy_overview')">PDF: обзор всего 2027 года</a>
-    <p class="bridge">Если впереди большое решение или нужен ответ на ваш вопрос, выбирайте персональный разбор</p>
+    <div class="price">3 990 ₽</div>
+    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf" onclick="g('buy_pdf')">Хочу PDF на 2027 год</a>
+    <p class="bridge">Если впереди большое решение или нужен ответ на ваш вопрос, выбирайте прогноз лично со мной</p>
     <div class="tg-note">💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»</div>
   </section>
 
   <a class="back" href="index.html">← Вернуться к моей кармической задаче 2027</a>
 </div>
 <script>
-var PRICES = {pdf:'3 500 ₽', old:'15 000 ₽', first:'9 990 ₽', late:'11 990 ₽', gift:'7 500 ₽'};
+var PRICES = {pdf:'3 990 ₽', year:'7 990 ₽', money:'13 990 ₽'};
 function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} return true; }
 (function(){
   var NAMES = {career:'Карьера и бизнес', love:'Отношения', health:'Здоровье и силы'};
   var k = new URLSearchParams(location.search).get('s') || location.hash.replace('#','');
   if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo(0,0);
-  if(NAMES[k]){ document.getElementById(k).classList.add('on'); document.getElementById('tA').textContent = NAMES[k] + ' · PDF на 2027 год'; var b = document.querySelector('a[data-tg="year_pdf_' + k + '"]'); if(b) b.classList.add('on'); }
-  var KEY = 'karma27_start', LEN = 24*3600*1000, start;
-  try{ start = +localStorage.getItem(KEY); if(!start){ start = Date.now(); localStorage.setItem(KEY, start); } }catch(e){ start = Date.now(); }
-  var t = document.getElementById('timer'), p = document.getElementById('pTop');
-  function pad(n){ return (n < 10 ? '0' : '') + n; }
-  function tick(){
-    var left = start + LEN - Date.now();
-    if(left <= 0){ p.innerHTML = PRICES.late + '<s>' + PRICES.old + '</s>'; t.textContent = 'Время спеццены вышло'; var pl = document.querySelector('.price-lbl'); if(pl) pl.style.display = 'none'; return; }
-    var h = Math.floor(left/3600000), m = Math.floor(left%3600000/60000), s = Math.floor(left%60000/1000);
-    t.innerHTML = '⏰ Цена ' + PRICES.first + ' только 24 часа. Осталось<b>' + pad(h) + ':' + pad(m) + ':' + pad(s) + '</b>';
-    setTimeout(tick, 1000);
-  }
-  tick();
+  if(NAMES[k]){ document.getElementById(k).classList.add('on'); }
 })();
 </script>
 <script>
 (function(){
   var U = 'https://t.me/okssmi?text=';
-  var late = function(){ var st = 0; try{ st = +localStorage.getItem('karma27_start'); }catch(e){} return st && Date.now() - st > 24*3600*1000; };
   function msg(k){
-    var full = late() ? PRICES.late : 'спеццене ' + PRICES.first;
-    var pdf = 'Здравствуйте, Оксана! Хочу PDF-прогноз на 2027 год по сфере: ';
     return {
-      year_pdf_money: pdf + 'деньги, ' + PRICES.pdf,
-      year_pdf_career: pdf + 'карьера и бизнес, ' + PRICES.pdf,
-      year_pdf_love: pdf + 'отношения, ' + PRICES.pdf,
-      year_pdf_health: pdf + 'здоровье и силы, ' + PRICES.pdf,
-      year_pdf_all: 'Здравствуйте, Оксана! Хочу PDF «Обзор всего 2027 года» (коротко по всем сферам), ' + PRICES.pdf,
-      year_full: 'Здравствуйте, Оксана! Хочу персональный прогноз на 2027 год по всем сферам лично с вами по ' + full,
-      gift: 'Здравствуйте, Оксана! Хочу подарить близкому второй персональный разбор за ' + PRICES.gift
+      year_pdf: 'Здравствуйте, Оксана! Хочу PDF-прогноз на весь 2027 год, ' + PRICES.pdf,
+      year_full: 'Здравствуйте, Оксана! Хочу персональный прогноз на 2027 год по всем сферам лично с вами, ' + PRICES.year
     }[k];
   }
   document.querySelectorAll('a[data-tg]').forEach(function(a){
     a.href = U + encodeURIComponent(msg(a.getAttribute('data-tg')));
-    if(a.classList.contains('pdfb')) return;
     var n = document.createElement('div'); n.className = 'tg-note'; n.textContent = '💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»';
     a.parentNode.insertBefore(n, a.nextSibling);
   });
